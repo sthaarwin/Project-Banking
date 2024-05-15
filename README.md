@@ -15,7 +15,7 @@ This is a simple banking system implemented in C++. The system allows users to c
 ### Prerequisites
 
 - C++ compiler (e.g., g++)
-- QT preinstalled
+- QT pre-installed
 - Git (optional)
 
 ### Installation
@@ -23,4 +23,4 @@ This is a simple banking system implemented in C++. The system allows users to c
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/simple-banking-system.git
+   git clone https://github.com/sthaarwin/Project-Banking
