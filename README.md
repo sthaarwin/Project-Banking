@@ -15,6 +15,7 @@ This is a simple banking system implemented in C++. The system allows users to c
 ### Prerequisites
 
 - C++ compiler (e.g., g++)
+- QT preinstalled
 - Git (optional)
 
 ### Installation
