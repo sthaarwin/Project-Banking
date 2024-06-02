@@ -1,0 +1,9 @@
+# ninja log v5
+603	3000	7384977334843596	CMakeFiles/project_banking.dir/project_banking_autogen/mocs_compilation.cpp.obj	6717b49bfc3be382
+5	131	7385167690169874	C:/Programming/C++ org/Project-Banking/project_banking/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/project_banking_autogen/mocs_compilation.cpp	de5871c75d64499c
+5	131	7385167690169874	project_banking_autogen/timestamp	de5871c75d64499c
+5	131	7385167690169874	project_banking_autogen/mocs_compilation.cpp	de5871c75d64499c
+5	131	7385167690169874	C:/Programming/C++ org/Project-Banking/project_banking/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/project_banking_autogen/timestamp	de5871c75d64499c
+605	3007	7384977335047335	CMakeFiles/project_banking.dir/main.cpp.obj	d63dc2d1fbac5f1b
+138	1683	7385167705769740	CMakeFiles/project_banking.dir/mainwindow.cpp.obj	4496377c2c615e8f
+1683	1845	7385167707220301	project_banking.exe	ad0c7b50b7594ade

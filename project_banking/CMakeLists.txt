@@ -16,13 +16,22 @@ set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
         mainwindow.h
-        mainwindow.ui
+        mainwindows.ui
+        signin.ui
+        signin.h
+        signin.cpp
+        signinoutask.cpp
+        signinoutask.up
+        signinoutask.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(project_banking
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        signin.h signin.cpp signin.ui
+        signinoutask.h signinoutask.cpp signinoutask.ui
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET project_banking APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
