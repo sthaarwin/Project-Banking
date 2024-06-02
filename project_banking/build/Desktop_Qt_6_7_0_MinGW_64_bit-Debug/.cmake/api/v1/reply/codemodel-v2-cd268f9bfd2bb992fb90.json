@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-ad391bff32fcb39ea569.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "project_banking",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "project_banking::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-project_banking-Debug-e3c53f906bda18c6266e.json",
+					"name" : "project_banking",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "project_banking_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-project_banking_autogen-Debug-a089feef46bf5b48f33e.json",
+					"name" : "project_banking_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "project_banking_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-project_banking_autogen_timestamp_deps-Debug-eaafda76cd2943293402.json",
+					"name" : "project_banking_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Programming/C++ org/Project-Banking/project_banking/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug",
+		"source" : "C:/Programming/C++ org/Project-Banking/project_banking"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
