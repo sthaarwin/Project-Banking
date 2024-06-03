@@ -1,0 +1,9 @@
+C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/nex-vault.dir
+C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/nex-vault_autogen_timestamp_deps.dir
+C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/nex-vault_autogen.dir

@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-444b296aba2ec81ed8b2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "nex-vault",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "nex-vault::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nex-vault-Debug-5f00cc3d82cd52a03652.json",
+					"name" : "nex-vault",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "nex-vault_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nex-vault_autogen-Debug-f5b487c1c64bcc1fb020.json",
+					"name" : "nex-vault_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "nex-vault_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nex-vault_autogen_timestamp_deps-Debug-7e0b361bb5d464a3aad4.json",
+					"name" : "nex-vault_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug",
+		"source" : "C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

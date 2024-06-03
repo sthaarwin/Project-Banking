@@ -1,0 +1,27 @@
+# ninja log v5
+23	175	7391112303748930	nex-vault_autogen/timestamp	cb9cedf15a6095aa
+674	2033	7391076391809031	CMakeFiles/nex-vault.dir/nex-vault_autogen/mocs_compilation.cpp.obj	663028592fcc3a76
+23	175	7391112303748930	nex-vault_autogen/mocs_compilation.cpp	cb9cedf15a6095aa
+23	175	7391112303748930	C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/nex-vault_autogen/timestamp	cb9cedf15a6095aa
+23	175	7391112303748930	C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/nex-vault_autogen/mocs_compilation.cpp	cb9cedf15a6095aa
+679	2027	7391076391749021	CMakeFiles/nex-vault.dir/main.cpp.obj	bf37ab3e9c1818a3
+181	1484	7391112316847837	CMakeFiles/nex-vault.dir/mainwindow.cpp.obj	906499f0ccfe2ca9
+1484	1611	7391112318082520	nex-vault.exe	799fe0953ab00a47
+28	186	7391112405268662	nex-vault_autogen/timestamp	cb9cedf15a6095aa
+28	186	7391112405268662	nex-vault_autogen/mocs_compilation.cpp	cb9cedf15a6095aa
+28	186	7391112405268662	C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/nex-vault_autogen/timestamp	cb9cedf15a6095aa
+28	186	7391112405268662	C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/nex-vault_autogen/mocs_compilation.cpp	cb9cedf15a6095aa
+193	1566	7391112419070502	CMakeFiles/nex-vault.dir/mainwindow.cpp.obj	906499f0ccfe2ca9
+1566	1692	7391112420285285	nex-vault.exe	799fe0953ab00a47
+18	167	7391129120896063	nex-vault_autogen/timestamp	cb9cedf15a6095aa
+18	167	7391129120896063	nex-vault_autogen/mocs_compilation.cpp	cb9cedf15a6095aa
+18	167	7391129120896063	C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/nex-vault_autogen/timestamp	cb9cedf15a6095aa
+18	167	7391129120896063	C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/nex-vault_autogen/mocs_compilation.cpp	cb9cedf15a6095aa
+173	1639	7391129135618160	CMakeFiles/nex-vault.dir/mainwindow.cpp.obj	906499f0ccfe2ca9
+1639	1777	7391129136964892	nex-vault.exe	799fe0953ab00a47
+23	182	7391129282941708	nex-vault_autogen/timestamp	cb9cedf15a6095aa
+23	182	7391129282941708	nex-vault_autogen/mocs_compilation.cpp	cb9cedf15a6095aa
+23	182	7391129282941708	C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/nex-vault_autogen/timestamp	cb9cedf15a6095aa
+23	182	7391129282941708	C:/Programming/C++ org/nex-vault/Project-Banking/nex-vault/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/nex-vault_autogen/mocs_compilation.cpp	cb9cedf15a6095aa
+189	1520	7391129296336132	CMakeFiles/nex-vault.dir/mainwindow.cpp.obj	906499f0ccfe2ca9
+1521	1662	7391129297702741	nex-vault.exe	799fe0953ab00a47
