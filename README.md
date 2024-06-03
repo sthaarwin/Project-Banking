@@ -1,4 +1,4 @@
-# Simple Banking System
+# NexVault Banking System
 
 This is a simple banking system implemented in C++. The system allows users to create accounts, deposit and withdraw funds, and check their balance.
 
