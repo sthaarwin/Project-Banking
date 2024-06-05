@@ -51,10 +51,10 @@ background-color{
 filter:blur(40px);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QTextEdit" name="textEdit">
        <property name="geometry">
@@ -105,7 +105,7 @@ padding-bottom:7px;
 </string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::Normal</enum>
+        <enum>QLineEdit::EchoMode::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Phone Number</string>
@@ -139,7 +139,7 @@ padding-bottom:7px;</string>
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
+        <enum>QLineEdit::EchoMode::Password</enum>
        </property>
        <property name="placeholderText">
         <string>Password</string>
@@ -148,7 +148,7 @@ padding-bottom:7px;</string>
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="loginButton">
        <property name="geometry">
         <rect>
          <x>140</x>
@@ -228,10 +228,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QLabel" name="label">
        <property name="geometry">
@@ -269,10 +269,10 @@ background-color{
 filter:blur(40px);}</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <widget class="QTextEdit" name="textEdit_2">
        <property name="geometry">
@@ -325,7 +325,7 @@ padding-bottom:7px;</string>
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::Normal</enum>
+        <enum>QLineEdit::EchoMode::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Email</string>
@@ -334,7 +334,7 @@ padding-bottom:7px;</string>
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="signupButton">
        <property name="geometry">
         <rect>
          <x>140</x>
@@ -409,7 +409,7 @@ padding-bottom:7px;
 </string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::Normal</enum>
+        <enum>QLineEdit::EchoMode::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Username</string>
@@ -443,7 +443,7 @@ padding-bottom:7px;</string>
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
+        <enum>QLineEdit::EchoMode::Password</enum>
        </property>
        <property name="placeholderText">
         <string>Password</string>
@@ -478,7 +478,7 @@ padding-bottom:7px;
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::Normal</enum>
+        <enum>QLineEdit::EchoMode::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Phone Number</string>
@@ -603,7 +603,7 @@ padding-bottom:7px;
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::Normal</enum>
+        <enum>QLineEdit::EchoMode::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Address</string>
@@ -623,10 +623,10 @@ padding-bottom:7px;
        </rect>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
      </widget>
     </widget>
