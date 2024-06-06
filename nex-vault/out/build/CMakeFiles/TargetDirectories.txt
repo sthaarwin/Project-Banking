@@ -1,0 +1,8 @@
+F:/C++/QT/project/nex-vault/out/build/CMakeFiles/nex-vault.dir
+F:/C++/QT/project/nex-vault/out/build/CMakeFiles/edit_cache.dir
+F:/C++/QT/project/nex-vault/out/build/CMakeFiles/rebuild_cache.dir
+F:/C++/QT/project/nex-vault/out/build/CMakeFiles/list_install_components.dir
+F:/C++/QT/project/nex-vault/out/build/CMakeFiles/install.dir
+F:/C++/QT/project/nex-vault/out/build/CMakeFiles/install/local.dir
+F:/C++/QT/project/nex-vault/out/build/CMakeFiles/nex-vault_autogen_timestamp_deps.dir
+F:/C++/QT/project/nex-vault/out/build/CMakeFiles/nex-vault_autogen.dir
