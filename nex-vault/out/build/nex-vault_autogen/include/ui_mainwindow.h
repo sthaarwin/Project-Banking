@@ -46,7 +46,7 @@ public:
     QTextEdit *textEdit_4;
     QLineEdit *lineEdit_5;
     QLineEdit *lineEdit_6;
-    QLineEdit *lineEdit_3;
+    QLineEdit *phoneNumberInputSignup;
     QCheckBox *checkBox;
     QCheckBox *checkBox_2;
     QCheckBox *checkBox_3;
@@ -202,18 +202,18 @@ public:
 "padding-bottom:7px;"));
         lineEdit_6->setEchoMode(QLineEdit::EchoMode::Password);
         lineEdit_6->setClearButtonEnabled(true);
-        lineEdit_3 = new QLineEdit(frame_3);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setGeometry(QRect(210, 240, 151, 51));
-        lineEdit_3->setFont(font1);
-        lineEdit_3->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+        phoneNumberInputSignup = new QLineEdit(frame_3);
+        phoneNumberInputSignup->setObjectName("phoneNumberInputSignup");
+        phoneNumberInputSignup->setGeometry(QRect(210, 240, 151, 51));
+        phoneNumberInputSignup->setFont(font1);
+        phoneNumberInputSignup->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
 "border:none;\n"
 "border-bottom:2px solid rgba(105,118,132,225);\n"
 "color:rgba(63, 63, 63,230);\n"
 "padding-bottom:7px;\n"
 ""));
-        lineEdit_3->setEchoMode(QLineEdit::EchoMode::Normal);
-        lineEdit_3->setClearButtonEnabled(true);
+        phoneNumberInputSignup->setEchoMode(QLineEdit::EchoMode::Normal);
+        phoneNumberInputSignup->setClearButtonEnabled(true);
         checkBox = new QCheckBox(frame_3);
         checkBox->setObjectName("checkBox");
         checkBox->setGeometry(QRect(50, 210, 71, 26));
@@ -262,7 +262,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -315,8 +315,8 @@ public:
         lineEdit_5->setPlaceholderText(QCoreApplication::translate("MainWindow", "Username", nullptr));
         lineEdit_6->setText(QString());
         lineEdit_6->setPlaceholderText(QCoreApplication::translate("MainWindow", "Password", nullptr));
-        lineEdit_3->setText(QString());
-        lineEdit_3->setPlaceholderText(QCoreApplication::translate("MainWindow", "Phone Number", nullptr));
+        phoneNumberInputSignup->setText(QString());
+        phoneNumberInputSignup->setPlaceholderText(QCoreApplication::translate("MainWindow", "Phone Number", nullptr));
         checkBox->setText(QCoreApplication::translate("MainWindow", "Male", nullptr));
         checkBox_2->setText(QCoreApplication::translate("MainWindow", "Female", nullptr));
         checkBox_3->setText(QCoreApplication::translate("MainWindow", "Other", nullptr));

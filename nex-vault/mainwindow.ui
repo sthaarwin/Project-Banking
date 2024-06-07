@@ -28,7 +28,7 @@
 border-radius:17px;</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QFrame" name="frame">
@@ -452,7 +452,7 @@ padding-bottom:7px;</string>
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_3">
+      <widget class="QLineEdit" name="phoneNumberInputSignup">
        <property name="geometry">
         <rect>
          <x>210</x>

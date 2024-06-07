@@ -9,10 +9,12 @@ MainWindow::MainWindow(QWidget* parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+	this->setFixedSize(this->width(), this->height());
 
+	QIntValidator* phoneNumberValidator = new QIntValidator(0, 9999999999, this);
+	ui->stackedWidget->findChild<QLineEdit*>("phoneNumberInputLogin")->setValidator(phoneNumberValidator);
+	ui->stackedWidget->findChild<QLineEdit*>("phoneNumberInputSignup")->setValidator(phoneNumberValidator);
     ui->stackedWidget->setCurrentIndex(0);
-	QIntValidator* intValidator = new QIntValidator(0, 9999999999, this);
-	ui->stackedWidget->findChild<QLineEdit*>("phoneNumberInputLogin")->setValidator(intValidator);
 
     connect(ui->stackedWidget->findChild<QPushButton*>("loginButton"), &QPushButton::clicked, this, &MainWindow::on_loginButton_clicked);
 	connect(ui->stackedWidget->findChild<QPushButton*>("signUp"), &QPushButton::clicked, this, &MainWindow::on_signupButton_clicked);
@@ -36,7 +38,14 @@ void MainWindow::on_loginButton_clicked()
 		QMessageBox::warning(this, "Invalid Password", "Please enter a valid password.");
 		return;
 	}
-	ui->stackedWidget->setCurrentIndex(1);
+	if (phoneNumber == 1234567890 && password == "password") {
+		QMessageBox::information(this, "Login Successful", "You have successfully logged in.");
+		ui->stackedWidget->setCurrentIndex(1);
+	}
+	else {
+		QMessageBox::warning(this, "Login Failed", "Invalid phone number or password.");
+		return;	
+	}
 }
 
 void MainWindow::on_signupButton_clicked()

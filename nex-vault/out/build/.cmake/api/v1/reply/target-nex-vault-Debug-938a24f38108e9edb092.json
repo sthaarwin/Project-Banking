@@ -375,11 +375,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "nex-vault_autogen::@6890427a1f51a3e7e1df"
+			"id" : "nex-vault_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "nex-vault_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "nex-vault_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "nex-vault::@6890427a1f51a3e7e1df",
