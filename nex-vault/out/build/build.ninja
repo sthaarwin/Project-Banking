@@ -175,7 +175,7 @@ build nex-vault_autogen\timestamp nex-vault_autogen\mocs_compilation.cpp | ${cma
 #############################################
 # Phony custom command for CMakeFiles\nex-vault_autogen_timestamp_deps
 
-build CMakeFiles\nex-vault_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles\nex-vault_autogen_timestamp_deps: phony D$:\QT\6.7.0\msvc2019_64\.\bin\moc.exe D$:\QT\6.7.0\msvc2019_64\lib\Qt6Widgetsd.lib D$:\QT\6.7.0\msvc2019_64\.\bin\uic.exe D$:\QT\6.7.0\msvc2019_64\lib\Qt6Cored.lib
+build CMakeFiles\nex-vault_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles\nex-vault_autogen_timestamp_deps: phony D$:\QT\6.7.0\msvc2019_64\.\bin\moc.exe D$:\QT\6.7.0\msvc2019_64\.\bin\uic.exe D$:\QT\6.7.0\msvc2019_64\lib\Qt6Cored.lib D$:\QT\6.7.0\msvc2019_64\lib\Qt6Widgetsd.lib
 
 
 #############################################

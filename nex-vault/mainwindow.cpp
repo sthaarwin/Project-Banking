@@ -3,6 +3,7 @@
 #include <QINTValidator>
 #include <QLineEdit>
 #include <QMessageBox>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent)
@@ -16,8 +17,14 @@ MainWindow::MainWindow(QWidget* parent)
 	ui->stackedWidget->findChild<QLineEdit*>("phoneNumberInputSignup")->setValidator(phoneNumberValidator);
     ui->stackedWidget->setCurrentIndex(0);
 
-    connect(ui->stackedWidget->findChild<QPushButton*>("loginButton"), &QPushButton::clicked, this, &MainWindow::on_loginButton_clicked);
-	connect(ui->stackedWidget->findChild<QPushButton*>("signUp"), &QPushButton::clicked, this, &MainWindow::on_signupButton_clicked);
+
+	// Disconnect any existing connections
+	disconnect(ui->stackedWidget->findChild<QPushButton*>("loginButton"), nullptr, this, nullptr);
+	disconnect(ui->stackedWidget->findChild<QPushButton*>("signUp"), nullptr, this, nullptr);
+
+	// Ensure unique connections
+    connect(ui->stackedWidget->findChild<QPushButton*>("loginButton"), &QPushButton::clicked, this, &MainWindow::on_loginButton_clicked, Qt::UniqueConnection);
+	connect(ui->stackedWidget->findChild<QPushButton*>("signUp"), &QPushButton::clicked, this, &MainWindow::on_signupButton_clicked, Qt::UniqueConnection);
 }
 
 MainWindow::~MainWindow()
@@ -27,6 +34,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_loginButton_clicked()
 {
+	qDebug() << "Login button clicked";
     QString phoneNumberStr = ui->stackedWidget->findChild<QLineEdit*>("phoneNumberInputLogin")->text();
 	long int phoneNumber = phoneNumberStr.toLong();
     if (phoneNumberStr.length() != 10) {
