@@ -23,4 +23,4 @@ This is a simple banking system implemented in C++. The system allows users to c
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/sthaarwin/Project-Banking
+   git clone https://github.com/sthaarwin/Project-Banking.git
