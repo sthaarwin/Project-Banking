@@ -310,6 +310,36 @@ nex-vault_autogen/timestamp: \
   D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake \
   D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake \
   D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginAdditionalTargetInfo.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginConfig.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-debug.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-relwithdebinfo.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginAdditionalTargetInfo.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginConfig.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-debug.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-relwithdebinfo.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-debug.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-relwithdebinfo.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-debug.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6SqlTargets-debug.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake \
+  D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake \
   D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake \
   D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake \
   D:/QT/6.7.0/msvc2019_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-debug.cmake \
