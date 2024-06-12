@@ -21,6 +21,7 @@ private slots:
 	void on_loginButton_clicked();
 	void on_signupButton_clicked();
     QString getdatabasepath();
+	bool validate_login(long int, QString);
 private:
     Ui::MainWindow *ui;
 };

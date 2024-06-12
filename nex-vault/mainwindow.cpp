@@ -33,7 +33,6 @@ MainWindow::MainWindow(QWidget* parent)
 	else {
 		qDebug() << "connected to database.";
 	}
-
 	//VALIDATOR SETUP
 	QIntValidator* phoneNumberValidator = new QIntValidator(0, 9999999999, this);
 	ui->stackedWidget->findChild<QLineEdit*>("phoneNumberInputLogin")->setValidator(phoneNumberValidator);
@@ -54,6 +53,8 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
 QString MainWindow::getdatabasepath() {
 	
 	QString databasePath = QCoreApplication::applicationDirPath();
@@ -68,6 +69,25 @@ QString MainWindow::getdatabasepath() {
 	return finalPath;
 }
 
+
+bool MainWindow::validate_login(long int phoneNumber, QString password) {
+	QSqlQuery query;
+	query.prepare("SELECT * FROM users WHERE PhoneNumber = phoneNumber AND Password = password");
+	query.bindValue(":RealPhoneNumber", QString::number(phoneNumber));
+	query.bindValue(":RealPassword", password);
+	qDebug() << "phoneNumber: " << phoneNumber;
+	qDebug() << "password: " << password;
+	if (!query.exec()) {
+		qDebug() << "Error: Could not execute query." << query.lastError();
+		return false;
+	}
+	if (query.next()) {
+		qDebug() << "found in database";
+		return true;
+	}
+	qDebug() << "mismatched database";
+	return false;
+}
 void MainWindow::on_loginButton_clicked()
 {
 	
@@ -88,7 +108,7 @@ void MainWindow::on_loginButton_clicked()
 
 	//sql querry
 
-	if (phoneNumber == 1234567890 && password == "password") {
+	if (validate_login(phoneNumber, password)) {
 		QMessageBox::information(this, "Login Successful", "You have successfully logged in.");
 		ui->stackedWidget->setCurrentIndex(1);
 	}

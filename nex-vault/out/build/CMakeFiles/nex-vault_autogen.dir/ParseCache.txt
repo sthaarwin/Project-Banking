@@ -152,6 +152,6 @@ F:/C++/QT/Project-Banking/nex-vault/mainwindow.h
  mdp:D:/QT/6.7.0/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:D:/QT/6.7.0/msvc2019_64/include/QtWidgets/qwidget.h
  mdp:F:/C++/QT/Project-Banking/nex-vault/mainwindow.h
+F:/C++/QT/Project-Banking/nex-vault/main.cpp
 F:/C++/QT/Project-Banking/nex-vault/mainwindow.cpp
  uic:./ui_mainwindow.h
-F:/C++/QT/Project-Banking/nex-vault/main.cpp
