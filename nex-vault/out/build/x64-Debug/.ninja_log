@@ -1,9 +1,0 @@
-# ninja log v5
-26	214	7392805908490669	nex-vault_autogen/timestamp	675ca0934206aab0
-441	2340	7392804160737754	CMakeFiles/nex-vault.dir/nex-vault_autogen/mocs_compilation.cpp.obj	4769850ad17c30b9
-26	214	7392805908490669	nex-vault_autogen/mocs_compilation.cpp	675ca0934206aab0
-26	214	7392805908490669	F:/C++/QT/project/nex-vault/out/build/x64-Debug/nex-vault_autogen/timestamp	675ca0934206aab0
-26	214	7392805908490669	F:/C++/QT/project/nex-vault/out/build/x64-Debug/nex-vault_autogen/mocs_compilation.cpp	675ca0934206aab0
-444	2381	7392804161153752	CMakeFiles/nex-vault.dir/main.cpp.obj	26cf95da5c665b2d
-216	2246	7392805928787907	CMakeFiles/nex-vault.dir/mainwindow.cpp.obj	b25c67095d9204d0
-2247	2607	7392805931661112	nex-vault.exe	af1e95fe2f4b9fe3

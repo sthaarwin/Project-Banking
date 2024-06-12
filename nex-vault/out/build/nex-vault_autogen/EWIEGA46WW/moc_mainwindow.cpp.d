@@ -1,4 +1,4 @@
-F:/C++/QT/project/nex-vault/out/build/nex-vault_autogen/EWIEGA46WW/moc_mainwindow.cpp: F:/C++/QT/project/nex-vault/mainwindow.h \
+F:/C++/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/EWIEGA46WW/moc_mainwindow.cpp: F:/C++/QT/Project-Banking/nex-vault/mainwindow.h \
   D:/QT/6.7.0/msvc2019_64/include/QtCore/q20functional.h \
   D:/QT/6.7.0/msvc2019_64/include/QtCore/q20memory.h \
   D:/QT/6.7.0/msvc2019_64/include/QtCore/q20type_traits.h \

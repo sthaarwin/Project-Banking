@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget* parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+	ui->stackedWidget->setCurrentIndex(0);
 	this->setFixedSize(this->width(), this->height());
 
 	//SQL CONNECTION
@@ -56,10 +57,10 @@ MainWindow::~MainWindow()
 QString MainWindow::getdatabasepath() {
 	
 	QString databasePath = QCoreApplication::applicationDirPath();
-	std::string to_remove = "/out/build/nex-vault.exe";
+	std::string to_remove = "/out/build";
 	int lengthdiff = databasePath.length() - to_remove.length();
 	QString finalPath = "";
-	for(int i = 0; i <= databasePath.length() - lengthdiff+2; i++) {
+	for(int i = 0; i <= lengthdiff; i++) {
 		finalPath += databasePath[i];
 	}
 	finalPath += "/database/users.db";
