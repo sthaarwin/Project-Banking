@@ -72,7 +72,7 @@ QString MainWindow::getdatabasepath() {
 
 bool MainWindow::validate_login(long int phoneNumber, QString password) {
 	QSqlQuery query;
-	query.prepare("SELECT * FROM users WHERE PhoneNumber = phoneNumber AND Password = password");
+	query.prepare("SELECT * FROM users WHERE PhoneNumber = :RealPhoneNumber AND Password = :RealPassword");
 	query.bindValue(":RealPhoneNumber", QString::number(phoneNumber));
 	query.bindValue(":RealPassword", password);
 	qDebug() << "phoneNumber: " << phoneNumber;
