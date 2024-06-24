@@ -1,8 +1,9 @@
-F:/C++/QT/Project-Banking/nex-vault/out/build/CMakeFiles/nex-vault.dir
-F:/C++/QT/Project-Banking/nex-vault/out/build/CMakeFiles/edit_cache.dir
-F:/C++/QT/Project-Banking/nex-vault/out/build/CMakeFiles/rebuild_cache.dir
-F:/C++/QT/Project-Banking/nex-vault/out/build/CMakeFiles/list_install_components.dir
-F:/C++/QT/Project-Banking/nex-vault/out/build/CMakeFiles/install.dir
-F:/C++/QT/Project-Banking/nex-vault/out/build/CMakeFiles/install/local.dir
-F:/C++/QT/Project-Banking/nex-vault/out/build/CMakeFiles/nex-vault_autogen_timestamp_deps.dir
-F:/C++/QT/Project-Banking/nex-vault/out/build/CMakeFiles/nex-vault_autogen.dir
+/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/CMakeFiles/nex-vault.dir
+/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/CMakeFiles/edit_cache.dir
+/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/CMakeFiles/rebuild_cache.dir
+/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/CMakeFiles/list_install_components.dir
+/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/CMakeFiles/install.dir
+/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/CMakeFiles/install/local.dir
+/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/CMakeFiles/install/strip.dir
+/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/CMakeFiles/nex-vault_autogen_timestamp_deps.dir
+/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/CMakeFiles/nex-vault_autogen.dir

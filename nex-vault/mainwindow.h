@@ -19,7 +19,10 @@ public:
 
 private slots:
 	void on_loginButton_clicked();
-	void on_signupButton_clicked();
+    void on_logoutButton_clicked();
+    void on_createaccountButton_clicked();
+    void on_LoginOnSighnupButton_clicked();
+    void on_continue_1_clicked();
     QString getdatabasepath();
 	bool validate_login(long int, QString);
 private:
