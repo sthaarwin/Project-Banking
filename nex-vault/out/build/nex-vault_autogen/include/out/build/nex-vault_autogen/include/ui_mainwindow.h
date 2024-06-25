@@ -11,13 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QScrollBar>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QTextEdit>
@@ -36,38 +36,54 @@ public:
     QLineEdit *phoneNumberInputLogin;
     QLineEdit *passwordInputLogin;
     QPushButton *loginButton;
-    QPushButton *forgetpassword;
     QPushButton *createaccountbutton;
+    QPushButton *forgot_password_on_login;
     QFrame *frame_2;
     QLabel *image;
     QWidget *Signup_page;
     QFrame *frame_3;
     QTextEdit *textEdit_2;
-    QLineEdit *first_name;
-    QLineEdit *middle_name;
-    QLineEdit *last_name;
+    QLineEdit *first_name_on_signup;
+    QLineEdit *middle_name_on_signup;
+    QLineEdit *last_name_on_signup;
     QPushButton *continue_1;
     QPushButton *loginButtonOnSignUpPage;
     QFrame *frame_4;
     QWidget *Signup_page_2;
     QFrame *frame_10;
     QTextEdit *textEdit_3;
-    QCheckBox *male;
-    QCheckBox *female;
-    QCheckBox *other;
+    QRadioButton *male_radiobox;
+    QRadioButton *female_radiobox;
+    QRadioButton *other;
     QTextEdit *Enter_gender;
-    QLineEdit *lineEdit_19;
-    QLineEdit *lineEdit_20;
-    QPushButton *continue_3;
-    QTextEdit *createaccount_2;
+    QLineEdit *address_on_signup;
+    QLineEdit *email_on_signup;
+    QPushButton *continue_2;
+    QPushButton *backbutton_1_onsignup;
     QWidget *Signup_page_3;
     QFrame *frame_11;
     QTextEdit *textEdit_4;
-    QLineEdit *password;
-    QLineEdit *phone_no;
-    QPushButton *continue_4;
-    QTextEdit *back_2;
-    QLineEdit *confirm_password;
+    QLineEdit *password_on_signup;
+    QLineEdit *phone_number_on_signup;
+    QPushButton *signupButton;
+    QLineEdit *confirmpassword_on_signup;
+    QPushButton *backbutton_2_onsignup;
+    QWidget *signup_page_4;
+    QFrame *frame_17;
+    QTextEdit *textEdit_10;
+    QLineEdit *movie_signup;
+    QLineEdit *food_signup;
+    QPushButton *continue_3;
+    QPushButton *backbutton_3_onsignup;
+    QFrame *frame_18;
+    QWidget *forgetpassword_3;
+    QFrame *frame_37;
+    QTextEdit *textEdit_22;
+    QLineEdit *movie_on_recovery;
+    QLineEdit *phone_number_on_srecovery;
+    QPushButton *recoveryButton;
+    QLineEdit *food_on_recovery;
+    QPushButton *login_on_recovery;
     QWidget *Main_page;
     QFrame *frame_8;
     QTextEdit *textEdit;
@@ -102,8 +118,6 @@ public:
     QTextEdit *back_4;
     QTextEdit *Sendmoney_txt_3;
     QTextEdit *Sendmoney_txt_4;
-    QWidget *page_9;
-    QWidget *page_7;
     QWidget *page_8;
     QFrame *frame_9;
     QTextEdit *textEdit_6;
@@ -179,16 +193,17 @@ public:
 "                                    background-color:rgb(31, 78, 121);\n"
 "\n"
 "                                    border-radius:7px;"));
-        forgetpassword = new QPushButton(frame);
-        forgetpassword->setObjectName("forgetpassword");
-        forgetpassword->setGeometry(QRect(240, 270, 131, 29));
-        forgetpassword->setStyleSheet(QString::fromUtf8("\n"
-"                                    background-color:rgba(104, 168, 225);\n"
-"                                    color:rgb(0, 0, 176);"));
         createaccountbutton = new QPushButton(frame);
         createaccountbutton->setObjectName("createaccountbutton");
         createaccountbutton->setGeometry(QRect(140, 390, 111, 26));
         createaccountbutton->setStyleSheet(QString::fromUtf8("color : rgb(58, 58, 58);\n"
+" font-weight: bold;\n"
+" background-color: transparent;\n"
+" border: none;"));
+        forgot_password_on_login = new QPushButton(frame);
+        forgot_password_on_login->setObjectName("forgot_password_on_login");
+        forgot_password_on_login->setGeometry(QRect(240, 260, 131, 26));
+        forgot_password_on_login->setStyleSheet(QString::fromUtf8("color : rgb(58, 58, 58);\n"
 " font-weight: bold;\n"
 " background-color: transparent;\n"
 " border: none;"));
@@ -219,45 +234,45 @@ public:
         textEdit_2->setStyleSheet(QString::fromUtf8("background-color:rgba(255, 235, 59,0);\n"
 "                                    text-color:rgb(255, 235, 59);"));
         textEdit_2->setReadOnly(true);
-        first_name = new QLineEdit(frame_3);
-        first_name->setObjectName("first_name");
-        first_name->setGeometry(QRect(40, 90, 311, 51));
+        first_name_on_signup = new QLineEdit(frame_3);
+        first_name_on_signup->setObjectName("first_name_on_signup");
+        first_name_on_signup->setGeometry(QRect(40, 90, 311, 51));
         QFont font3;
         font3.setPointSize(12);
         font3.setBold(false);
-        first_name->setFont(font3);
-        first_name->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+        first_name_on_signup->setFont(font3);
+        first_name_on_signup->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
 "                                    border:none;\n"
 "                                    border-bottom:2px solid rgba(105,118,132,225);\n"
 "                                    color:rgba(63, 63, 63,230);\n"
 "                                    padding-bottom:7px;\n"
 "                                "));
-        first_name->setEchoMode(QLineEdit::EchoMode::Normal);
-        first_name->setClearButtonEnabled(true);
-        middle_name = new QLineEdit(frame_3);
-        middle_name->setObjectName("middle_name");
-        middle_name->setGeometry(QRect(40, 160, 311, 51));
-        middle_name->setFont(font);
-        middle_name->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+        first_name_on_signup->setEchoMode(QLineEdit::EchoMode::Normal);
+        first_name_on_signup->setClearButtonEnabled(true);
+        middle_name_on_signup = new QLineEdit(frame_3);
+        middle_name_on_signup->setObjectName("middle_name_on_signup");
+        middle_name_on_signup->setGeometry(QRect(40, 160, 311, 51));
+        middle_name_on_signup->setFont(font);
+        middle_name_on_signup->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
 "                                    border:none;\n"
 "                                    border-bottom:2px solid rgba(105,118,132,225);\n"
 "                                    color:rgba(63, 63, 63,230);\n"
 "                                    padding-bottom:7px;\n"
 "                                "));
-        middle_name->setEchoMode(QLineEdit::EchoMode::Normal);
-        middle_name->setClearButtonEnabled(true);
-        last_name = new QLineEdit(frame_3);
-        last_name->setObjectName("last_name");
-        last_name->setGeometry(QRect(40, 230, 311, 51));
-        last_name->setFont(font);
-        last_name->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+        middle_name_on_signup->setEchoMode(QLineEdit::EchoMode::Normal);
+        middle_name_on_signup->setClearButtonEnabled(true);
+        last_name_on_signup = new QLineEdit(frame_3);
+        last_name_on_signup->setObjectName("last_name_on_signup");
+        last_name_on_signup->setGeometry(QRect(40, 230, 311, 51));
+        last_name_on_signup->setFont(font);
+        last_name_on_signup->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
 "                                    border:none;\n"
 "                                    border-bottom:2px solid rgba(105,118,132,225);\n"
 "                                    color:rgba(63, 63, 63,230);\n"
 "                                    padding-bottom:7px;\n"
 "                                "));
-        last_name->setEchoMode(QLineEdit::EchoMode::Normal);
-        last_name->setClearButtonEnabled(true);
+        last_name_on_signup->setEchoMode(QLineEdit::EchoMode::Normal);
+        last_name_on_signup->setClearButtonEnabled(true);
         continue_1 = new QPushButton(frame_3);
         continue_1->setObjectName("continue_1");
         continue_1->setGeometry(QRect(100, 320, 201, 41));
@@ -300,19 +315,20 @@ public:
         textEdit_3->setStyleSheet(QString::fromUtf8("background-color:rgba(255, 235, 59,0);\n"
 "                                    text-color:rgb(255, 235, 59);"));
         textEdit_3->setReadOnly(true);
-        male = new QCheckBox(frame_10);
-        male->setObjectName("male");
-        male->setGeometry(QRect(50, 280, 71, 26));
-        male->setFont(font1);
-        male->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);\n"
+        male_radiobox = new QRadioButton(frame_10);
+        male_radiobox->setObjectName("male_radiobox");
+        male_radiobox->setGeometry(QRect(50, 280, 71, 26));
+        male_radiobox->setFont(font1);
+        male_radiobox->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);\n"
 "                                    color:rgba(63, 63, 63,230);"));
-        female = new QCheckBox(frame_10);
-        female->setObjectName("female");
-        female->setGeometry(QRect(150, 280, 81, 26));
-        female->setFont(font1);
-        female->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);\n"
+        male_radiobox->setChecked(true);
+        female_radiobox = new QRadioButton(frame_10);
+        female_radiobox->setObjectName("female_radiobox");
+        female_radiobox->setGeometry(QRect(150, 280, 81, 26));
+        female_radiobox->setFont(font1);
+        female_radiobox->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);\n"
 "                                    color:rgba(63, 63, 63,230);"));
-        other = new QCheckBox(frame_10);
+        other = new QRadioButton(frame_10);
         other->setObjectName("other");
         other->setGeometry(QRect(280, 280, 71, 26));
         other->setFont(font1);
@@ -323,45 +339,48 @@ public:
         Enter_gender->setGeometry(QRect(40, 240, 181, 31));
         Enter_gender->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);\n"
 "                                    color:rgba(63, 63, 63,230);"));
-        lineEdit_19 = new QLineEdit(frame_10);
-        lineEdit_19->setObjectName("lineEdit_19");
-        lineEdit_19->setGeometry(QRect(40, 170, 311, 51));
-        lineEdit_19->setFont(font);
-        lineEdit_19->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+        address_on_signup = new QLineEdit(frame_10);
+        address_on_signup->setObjectName("address_on_signup");
+        address_on_signup->setGeometry(QRect(40, 170, 311, 51));
+        address_on_signup->setFont(font);
+        address_on_signup->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
 "                                    border:none;\n"
 "                                    border-bottom:2px solid rgba(105,118,132,225);\n"
 "                                    color:rgba(63, 63, 63,230);\n"
 "                                    padding-bottom:7px;\n"
 "                                "));
-        lineEdit_19->setEchoMode(QLineEdit::EchoMode::Normal);
-        lineEdit_19->setClearButtonEnabled(true);
-        lineEdit_20 = new QLineEdit(frame_10);
-        lineEdit_20->setObjectName("lineEdit_20");
-        lineEdit_20->setGeometry(QRect(40, 90, 311, 51));
-        lineEdit_20->setFont(font);
-        lineEdit_20->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+        address_on_signup->setEchoMode(QLineEdit::EchoMode::Normal);
+        address_on_signup->setClearButtonEnabled(true);
+        email_on_signup = new QLineEdit(frame_10);
+        email_on_signup->setObjectName("email_on_signup");
+        email_on_signup->setGeometry(QRect(40, 90, 311, 51));
+        email_on_signup->setFont(font);
+        email_on_signup->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
 "                                    border:none;\n"
 "                                    border-bottom:2px solid rgba(105,118,132,225);\n"
 "                                    color:rgba(63, 63, 63,230);\n"
 "                                    padding-bottom:7px;\n"
 "                                "));
-        lineEdit_20->setEchoMode(QLineEdit::EchoMode::Normal);
-        lineEdit_20->setClearButtonEnabled(true);
-        continue_3 = new QPushButton(frame_10);
-        continue_3->setObjectName("continue_3");
-        continue_3->setGeometry(QRect(100, 340, 201, 41));
-        continue_3->setFont(font2);
-        continue_3->setMouseTracking(true);
-        continue_3->setTabletTracking(true);
-        continue_3->setStyleSheet(QString::fromUtf8("\n"
+        email_on_signup->setEchoMode(QLineEdit::EchoMode::Normal);
+        email_on_signup->setClearButtonEnabled(true);
+        continue_2 = new QPushButton(frame_10);
+        continue_2->setObjectName("continue_2");
+        continue_2->setGeometry(QRect(100, 340, 201, 41));
+        continue_2->setFont(font2);
+        continue_2->setMouseTracking(true);
+        continue_2->setTabletTracking(true);
+        continue_2->setStyleSheet(QString::fromUtf8("\n"
 "                                    color:rgb(255, 255, 255);\n"
 "                                    background-color:rgb(31, 78, 121);\n"
 "\n"
 "                                    border-radius:7px;"));
-        createaccount_2 = new QTextEdit(frame_10);
-        createaccount_2->setObjectName("createaccount_2");
-        createaccount_2->setGeometry(QRect(140, 390, 131, 41));
-        createaccount_2->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);"));
+        backbutton_1_onsignup = new QPushButton(frame_10);
+        backbutton_1_onsignup->setObjectName("backbutton_1_onsignup");
+        backbutton_1_onsignup->setGeometry(QRect(160, 400, 80, 26));
+        backbutton_1_onsignup->setStyleSheet(QString::fromUtf8("color : rgb(31, 78, 121);\n"
+" font-weight: bold;\n"
+" background-color: transparent;\n"
+" border: none;"));
         stackedWidget->addWidget(Signup_page_2);
         Signup_page_3 = new QWidget();
         Signup_page_3->setObjectName("Signup_page_3");
@@ -380,58 +399,199 @@ public:
         textEdit_4->setStyleSheet(QString::fromUtf8("background-color:rgba(255, 235, 59,0);\n"
 "                                    text-color:rgb(255, 235, 59);"));
         textEdit_4->setReadOnly(true);
-        password = new QLineEdit(frame_11);
-        password->setObjectName("password");
-        password->setGeometry(QRect(40, 170, 311, 51));
-        password->setFont(font);
-        password->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+        password_on_signup = new QLineEdit(frame_11);
+        password_on_signup->setObjectName("password_on_signup");
+        password_on_signup->setGeometry(QRect(40, 170, 311, 51));
+        password_on_signup->setFont(font);
+        password_on_signup->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
 "                                    border:none;\n"
 "                                    border-bottom:2px solid rgba(105,118,132,225);\n"
 "                                    color:rgba(63, 63, 63,230);\n"
 "                                    padding-bottom:7px;\n"
 "                                "));
-        password->setEchoMode(QLineEdit::EchoMode::Password);
-        password->setClearButtonEnabled(true);
-        phone_no = new QLineEdit(frame_11);
-        phone_no->setObjectName("phone_no");
-        phone_no->setGeometry(QRect(40, 90, 311, 51));
-        phone_no->setFont(font);
-        phone_no->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+        password_on_signup->setEchoMode(QLineEdit::EchoMode::Password);
+        password_on_signup->setClearButtonEnabled(true);
+        phone_number_on_signup = new QLineEdit(frame_11);
+        phone_number_on_signup->setObjectName("phone_number_on_signup");
+        phone_number_on_signup->setGeometry(QRect(40, 90, 311, 51));
+        phone_number_on_signup->setFont(font);
+        phone_number_on_signup->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
 "                                    border:none;\n"
 "                                    border-bottom:2px solid rgba(105,118,132,225);\n"
 "                                    color:rgba(63, 63, 63,230);\n"
 "                                    padding-bottom:7px;\n"
 "                                "));
-        phone_no->setEchoMode(QLineEdit::EchoMode::Normal);
-        phone_no->setClearButtonEnabled(true);
-        continue_4 = new QPushButton(frame_11);
-        continue_4->setObjectName("continue_4");
-        continue_4->setGeometry(QRect(100, 340, 201, 41));
-        continue_4->setFont(font2);
-        continue_4->setMouseTracking(true);
-        continue_4->setTabletTracking(true);
-        continue_4->setStyleSheet(QString::fromUtf8("\n"
+        phone_number_on_signup->setEchoMode(QLineEdit::EchoMode::Normal);
+        phone_number_on_signup->setClearButtonEnabled(true);
+        signupButton = new QPushButton(frame_11);
+        signupButton->setObjectName("signupButton");
+        signupButton->setGeometry(QRect(100, 340, 201, 41));
+        signupButton->setFont(font2);
+        signupButton->setMouseTracking(true);
+        signupButton->setTabletTracking(true);
+        signupButton->setStyleSheet(QString::fromUtf8("\n"
 "                                    color:rgb(255, 255, 255);\n"
 "                                    background-color:rgb(31, 78, 121);\n"
 "\n"
 "                                    border-radius:7px;"));
-        back_2 = new QTextEdit(frame_11);
-        back_2->setObjectName("back_2");
-        back_2->setGeometry(QRect(140, 390, 131, 41));
-        back_2->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);"));
-        confirm_password = new QLineEdit(frame_11);
-        confirm_password->setObjectName("confirm_password");
-        confirm_password->setGeometry(QRect(40, 250, 311, 51));
-        confirm_password->setFont(font);
-        confirm_password->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+        confirmpassword_on_signup = new QLineEdit(frame_11);
+        confirmpassword_on_signup->setObjectName("confirmpassword_on_signup");
+        confirmpassword_on_signup->setGeometry(QRect(40, 250, 311, 51));
+        confirmpassword_on_signup->setFont(font);
+        confirmpassword_on_signup->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
 "                                    border:none;\n"
 "                                    border-bottom:2px solid rgba(105,118,132,225);\n"
 "                                    color:rgba(63, 63, 63,230);\n"
 "                                    padding-bottom:7px;\n"
 "                                "));
-        confirm_password->setEchoMode(QLineEdit::EchoMode::Password);
-        confirm_password->setClearButtonEnabled(true);
+        confirmpassword_on_signup->setEchoMode(QLineEdit::EchoMode::Password);
+        confirmpassword_on_signup->setClearButtonEnabled(true);
+        backbutton_2_onsignup = new QPushButton(frame_11);
+        backbutton_2_onsignup->setObjectName("backbutton_2_onsignup");
+        backbutton_2_onsignup->setGeometry(QRect(160, 390, 80, 26));
+        backbutton_2_onsignup->setStyleSheet(QString::fromUtf8("color : rgb(31, 78, 121);\n"
+" font-weight: bold;\n"
+" background-color: transparent;\n"
+" border: none;"));
         stackedWidget->addWidget(Signup_page_3);
+        signup_page_4 = new QWidget();
+        signup_page_4->setObjectName("signup_page_4");
+        frame_17 = new QFrame(signup_page_4);
+        frame_17->setObjectName("frame_17");
+        frame_17->setGeometry(QRect(490, 20, 401, 441));
+        frame_17->setFont(font1);
+        frame_17->setStyleSheet(QString::fromUtf8("background-color:rgba(245, 245, 245,210);\n"
+"\n"
+"                                filter:blur(40px);"));
+        frame_17->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_17->setFrameShadow(QFrame::Shadow::Raised);
+        textEdit_10 = new QTextEdit(frame_17);
+        textEdit_10->setObjectName("textEdit_10");
+        textEdit_10->setGeometry(QRect(20, 50, 341, 41));
+        textEdit_10->setStyleSheet(QString::fromUtf8("background-color:rgba(255, 235, 59,0);\n"
+"                                    text-color:rgb(255, 235, 59);"));
+        textEdit_10->setReadOnly(true);
+        movie_signup = new QLineEdit(frame_17);
+        movie_signup->setObjectName("movie_signup");
+        movie_signup->setGeometry(QRect(40, 120, 311, 51));
+        movie_signup->setFont(font3);
+        movie_signup->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+"                                    border:none;\n"
+"                                    border-bottom:2px solid rgba(105,118,132,225);\n"
+"                                    color:rgba(63, 63, 63,230);\n"
+"                                    padding-bottom:7px;\n"
+"                                "));
+        movie_signup->setEchoMode(QLineEdit::EchoMode::Normal);
+        movie_signup->setClearButtonEnabled(true);
+        food_signup = new QLineEdit(frame_17);
+        food_signup->setObjectName("food_signup");
+        food_signup->setGeometry(QRect(40, 210, 311, 51));
+        food_signup->setFont(font);
+        food_signup->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+"                                    border:none;\n"
+"                                    border-bottom:2px solid rgba(105,118,132,225);\n"
+"                                    color:rgba(63, 63, 63,230);\n"
+"                                    padding-bottom:7px;\n"
+"                                "));
+        food_signup->setEchoMode(QLineEdit::EchoMode::Normal);
+        food_signup->setClearButtonEnabled(true);
+        continue_3 = new QPushButton(frame_17);
+        continue_3->setObjectName("continue_3");
+        continue_3->setGeometry(QRect(100, 320, 201, 41));
+        continue_3->setFont(font2);
+        continue_3->setMouseTracking(true);
+        continue_3->setTabletTracking(true);
+        continue_3->setStyleSheet(QString::fromUtf8("\n"
+"                                    color:rgb(255, 255, 255);\n"
+"                                    background-color:rgb(31, 78, 121);\n"
+"\n"
+"                                    border-radius:7px;"));
+        backbutton_3_onsignup = new QPushButton(frame_17);
+        backbutton_3_onsignup->setObjectName("backbutton_3_onsignup");
+        backbutton_3_onsignup->setGeometry(QRect(170, 380, 71, 26));
+        backbutton_3_onsignup->setStyleSheet(QString::fromUtf8("color : rgb(31, 78, 121);\n"
+" font-weight: bold;\n"
+" background-color: transparent;\n"
+" border: none;"));
+        frame_18 = new QFrame(signup_page_4);
+        frame_18->setObjectName("frame_18");
+        frame_18->setGeometry(QRect(19, 19, 451, 441));
+        frame_18->setStyleSheet(QString::fromUtf8("background-color:rgb(44, 44, 44);"));
+        frame_18->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_18->setFrameShadow(QFrame::Shadow::Raised);
+        stackedWidget->addWidget(signup_page_4);
+        forgetpassword_3 = new QWidget();
+        forgetpassword_3->setObjectName("forgetpassword_3");
+        frame_37 = new QFrame(forgetpassword_3);
+        frame_37->setObjectName("frame_37");
+        frame_37->setGeometry(QRect(490, 20, 401, 441));
+        frame_37->setFont(font1);
+        frame_37->setStyleSheet(QString::fromUtf8("background-color:rgba(245, 245, 245,210);\n"
+"\n"
+"                                filter:blur(40px);"));
+        frame_37->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_37->setFrameShadow(QFrame::Shadow::Raised);
+        textEdit_22 = new QTextEdit(frame_37);
+        textEdit_22->setObjectName("textEdit_22");
+        textEdit_22->setGeometry(QRect(30, 10, 341, 61));
+        textEdit_22->setStyleSheet(QString::fromUtf8("background-color:rgba(255, 235, 59,0);\n"
+"                                    text-color:rgb(255, 235, 59);"));
+        textEdit_22->setReadOnly(true);
+        movie_on_recovery = new QLineEdit(frame_37);
+        movie_on_recovery->setObjectName("movie_on_recovery");
+        movie_on_recovery->setGeometry(QRect(40, 170, 311, 51));
+        movie_on_recovery->setFont(font);
+        movie_on_recovery->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+"                                    border:none;\n"
+"                                    border-bottom:2px solid rgba(105,118,132,225);\n"
+"                                    color:rgba(63, 63, 63,230);\n"
+"                                    padding-bottom:7px;\n"
+"                                "));
+        movie_on_recovery->setEchoMode(QLineEdit::EchoMode::Password);
+        movie_on_recovery->setClearButtonEnabled(true);
+        phone_number_on_srecovery = new QLineEdit(frame_37);
+        phone_number_on_srecovery->setObjectName("phone_number_on_srecovery");
+        phone_number_on_srecovery->setGeometry(QRect(40, 90, 311, 51));
+        phone_number_on_srecovery->setFont(font);
+        phone_number_on_srecovery->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+"                                    border:none;\n"
+"                                    border-bottom:2px solid rgba(105,118,132,225);\n"
+"                                    color:rgba(63, 63, 63,230);\n"
+"                                    padding-bottom:7px;\n"
+"                                "));
+        phone_number_on_srecovery->setEchoMode(QLineEdit::EchoMode::Normal);
+        phone_number_on_srecovery->setClearButtonEnabled(true);
+        recoveryButton = new QPushButton(frame_37);
+        recoveryButton->setObjectName("recoveryButton");
+        recoveryButton->setGeometry(QRect(100, 340, 201, 41));
+        recoveryButton->setFont(font2);
+        recoveryButton->setMouseTracking(true);
+        recoveryButton->setTabletTracking(true);
+        recoveryButton->setStyleSheet(QString::fromUtf8("\n"
+"                                    color:rgb(255, 255, 255);\n"
+"                                    background-color:rgb(31, 78, 121);\n"
+"\n"
+"                                    border-radius:7px;"));
+        food_on_recovery = new QLineEdit(frame_37);
+        food_on_recovery->setObjectName("food_on_recovery");
+        food_on_recovery->setGeometry(QRect(40, 250, 311, 51));
+        food_on_recovery->setFont(font);
+        food_on_recovery->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+"                                    border:none;\n"
+"                                    border-bottom:2px solid rgba(105,118,132,225);\n"
+"                                    color:rgba(63, 63, 63,230);\n"
+"                                    padding-bottom:7px;\n"
+"                                "));
+        food_on_recovery->setEchoMode(QLineEdit::EchoMode::Password);
+        food_on_recovery->setClearButtonEnabled(true);
+        login_on_recovery = new QPushButton(frame_37);
+        login_on_recovery->setObjectName("login_on_recovery");
+        login_on_recovery->setGeometry(QRect(160, 390, 80, 26));
+        login_on_recovery->setStyleSheet(QString::fromUtf8("color : rgb(31, 78, 121);\n"
+" font-weight: bold;\n"
+" background-color: transparent;\n"
+" border: none;"));
+        stackedWidget->addWidget(forgetpassword_3);
         Main_page = new QWidget();
         Main_page->setObjectName("Main_page");
         frame_8 = new QFrame(Main_page);
@@ -532,7 +692,7 @@ public:
         holder_name->setClearButtonEnabled(true);
         continue_5 = new QPushButton(frame_5);
         continue_5->setObjectName("continue_5");
-        continue_5->setGeometry(QRect(350, 370, 201, 41));
+        continue_5->setGeometry(QRect(370, 370, 201, 41));
         continue_5->setFont(font2);
         continue_5->setMouseTracking(true);
         continue_5->setTabletTracking(true);
@@ -543,7 +703,7 @@ public:
 "                                    border-radius:7px;"));
         back = new QTextEdit(frame_5);
         back->setObjectName("back");
-        back->setGeometry(QRect(390, 430, 131, 41));
+        back->setGeometry(QRect(410, 430, 131, 41));
         back->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);"));
         Sendmoney_txt = new QTextEdit(frame_5);
         Sendmoney_txt->setObjectName("Sendmoney_txt");
@@ -660,12 +820,6 @@ public:
 "                                    text-color:rgba(245, 245, 245,210);"));
         Sendmoney_txt_4->setReadOnly(true);
         stackedWidget->addWidget(transaction_success);
-        page_9 = new QWidget();
-        page_9->setObjectName("page_9");
-        stackedWidget->addWidget(page_9);
-        page_7 = new QWidget();
-        page_7->setObjectName("page_7");
-        stackedWidget->addWidget(page_7);
         page_8 = new QWidget();
         page_8->setObjectName("page_8");
         frame_9 = new QFrame(page_8);
@@ -689,7 +843,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -711,8 +865,8 @@ public:
         passwordInputLogin->setText(QString());
         passwordInputLogin->setPlaceholderText(QCoreApplication::translate("MainWindow", "Password", nullptr));
         loginButton->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
-        forgetpassword->setText(QCoreApplication::translate("MainWindow", "Forgot pasword?", nullptr));
         createaccountbutton->setText(QCoreApplication::translate("MainWindow", "Create Account?", nullptr));
+        forgot_password_on_login->setText(QCoreApplication::translate("MainWindow", "forgot password?", nullptr));
         image->setText(QString());
         textEdit_2->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
@@ -723,9 +877,9 @@ public:
 "</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">                                    </p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:20pt; font-weight:700; color:#1f4e79;\">SignUp</span></p></body></html>", nullptr));
-        first_name->setPlaceholderText(QCoreApplication::translate("MainWindow", "First Name", nullptr));
-        middle_name->setPlaceholderText(QCoreApplication::translate("MainWindow", "Middle Name", nullptr));
-        last_name->setPlaceholderText(QCoreApplication::translate("MainWindow", "Last Name", nullptr));
+        first_name_on_signup->setPlaceholderText(QCoreApplication::translate("MainWindow", "First Name", nullptr));
+        middle_name_on_signup->setPlaceholderText(QCoreApplication::translate("MainWindow", "Middle Name (optional)", nullptr));
+        last_name_on_signup->setPlaceholderText(QCoreApplication::translate("MainWindow", "Last Name", nullptr));
         continue_1->setText(QCoreApplication::translate("MainWindow", "Continue", nullptr));
         loginButtonOnSignUpPage->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         textEdit_3->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -737,9 +891,9 @@ public:
 "</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">                                    </p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:20pt; font-weight:700; color:#1f4e79;\">SignUp</span></p></body></html>", nullptr));
-        male->setText(QCoreApplication::translate("MainWindow", "Male", nullptr));
-        female->setText(QCoreApplication::translate("MainWindow", "Female", nullptr));
-        other->setText(QCoreApplication::translate("MainWindow", "Other", nullptr));
+        male_radiobox->setText(QCoreApplication::translate("MainWindow", "&Male", nullptr));
+        female_radiobox->setText(QCoreApplication::translate("MainWindow", "Fem&ale", nullptr));
+        other->setText(QCoreApplication::translate("MainWindow", "O&ther", nullptr));
         Enter_gender->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -748,19 +902,12 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; color:#716445;\">Enter your Gender:</span></p></body></html>", nullptr));
-        lineEdit_19->setText(QString());
-        lineEdit_19->setPlaceholderText(QCoreApplication::translate("MainWindow", "Address", nullptr));
-        lineEdit_20->setText(QString());
-        lineEdit_20->setPlaceholderText(QCoreApplication::translate("MainWindow", "Email Address", nullptr));
-        continue_3->setText(QCoreApplication::translate("MainWindow", "Continue", nullptr));
-        createaccount_2->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:700; color:#1f4e79;\">Back</span></p></body></html>", nullptr));
+        address_on_signup->setText(QString());
+        address_on_signup->setPlaceholderText(QCoreApplication::translate("MainWindow", "Address", nullptr));
+        email_on_signup->setText(QString());
+        email_on_signup->setPlaceholderText(QCoreApplication::translate("MainWindow", "Email Address", nullptr));
+        continue_2->setText(QCoreApplication::translate("MainWindow", "Continue", nullptr));
+        backbutton_1_onsignup->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         textEdit_4->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -770,21 +917,43 @@ public:
 "</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">                                    </p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:20pt; font-weight:700; color:#1f4e79;\">SignUp</span></p></body></html>", nullptr));
-        password->setText(QString());
-        password->setPlaceholderText(QCoreApplication::translate("MainWindow", "Password", nullptr));
-        phone_no->setText(QString());
-        phone_no->setPlaceholderText(QCoreApplication::translate("MainWindow", "Phone no", nullptr));
-        continue_4->setText(QCoreApplication::translate("MainWindow", "Sign Up", nullptr));
-        back_2->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        password_on_signup->setText(QString());
+        password_on_signup->setPlaceholderText(QCoreApplication::translate("MainWindow", "Password", nullptr));
+        phone_number_on_signup->setText(QString());
+        phone_number_on_signup->setPlaceholderText(QCoreApplication::translate("MainWindow", "Phone Number", nullptr));
+        signupButton->setText(QCoreApplication::translate("MainWindow", "Sign Up", nullptr));
+        confirmpassword_on_signup->setText(QString());
+        confirmpassword_on_signup->setPlaceholderText(QCoreApplication::translate("MainWindow", "Confirm Password", nullptr));
+        backbutton_2_onsignup->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        textEdit_10->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:700; color:#1f4e79;\">Back</span></p></body></html>", nullptr));
-        confirm_password->setText(QString());
-        confirm_password->setPlaceholderText(QCoreApplication::translate("MainWindow", "Confirm Password", nullptr));
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:20pt; font-weight:700; color:#1f4e79;\">Security Questions</span></p></body></html>", nullptr));
+        movie_signup->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter your favourite movie ", nullptr));
+        food_signup->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter  you favourite food", nullptr));
+        continue_3->setText(QCoreApplication::translate("MainWindow", "Signup", nullptr));
+        backbutton_3_onsignup->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        textEdit_22->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">                                    </p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:20pt; font-weight:700; color:#1f4e79;\">Password Recovery</span></p></body></html>", nullptr));
+        movie_on_recovery->setText(QString());
+        movie_on_recovery->setPlaceholderText(QCoreApplication::translate("MainWindow", "New Password", nullptr));
+        phone_number_on_srecovery->setText(QString());
+        phone_number_on_srecovery->setPlaceholderText(QCoreApplication::translate("MainWindow", "Phone Number", nullptr));
+        recoveryButton->setText(QCoreApplication::translate("MainWindow", "Recover", nullptr));
+        food_on_recovery->setText(QString());
+        food_on_recovery->setPlaceholderText(QCoreApplication::translate("MainWindow", "Confirm Password", nullptr));
+        login_on_recovery->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         textEdit->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
