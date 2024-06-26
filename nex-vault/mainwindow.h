@@ -31,8 +31,14 @@ private slots:
     void on_backbutton_2_onsignup_clicked();
     void on_backbutton_3_onsignup_clicked();
     void on_login_on_recovery_clicked();
+    void on_confirm_button_on_recovery_clicked();
+    void on_recovery_button_on_recovery_clicked();
     QString getdatabasepath();
 	bool validate_login(long int, QString);
+    QString generateCreditCardNumber();
+    QString generateAccountNumber();
+    void clear_fields();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -10,10 +10,33 @@
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlQuery>
 #include <QtSql/QSqlError>
+#include <QtSql/QSqlRecord>
 #include <string>
 #include <QRegularExpression>
 #include <QRadioButton>
+#include <QVariant>
+#include <QRandomGenerator>
 
+
+class user{
+    public:
+      QString firstName;
+      QString lastName;
+      QString middleName;
+      long int phoneNumber;
+      QString password;
+      QString email;
+	  QString gender;
+	  QString accountNumber;
+	  QString creditNumber;
+	  long int amount;
+      QString address;
+	  QString security1;
+	  QString security2;
+	  QString transactionHistory;
+
+};
+user user;
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent)
@@ -24,24 +47,12 @@ MainWindow::MainWindow(QWidget* parent)
 	this->setFixedSize(this->width(), this->height());
 	this->setWindowTitle("Nex Vault");
 
-	//SQL CONNECTION
-	QString databasePath = getdatabasepath();
-	QString path = QCoreApplication::applicationFilePath();
-	QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-	db.setDatabaseName(databasePath);
-	qDebug() << "Database path:" << db.databaseName();
-
-	if (!db.open()) {
-		qDebug() << "Error: Could not connect to database." << db.lastError();
-		return;
-	}
-	else {
-		qDebug() << "connected to database.";
-	}
+	
 	//VALIDATOR SETUP
 	QIntValidator* phoneNumberValidator = new QIntValidator(0, 9999999999, this);
 	ui->stackedWidget->findChild<QLineEdit*>("phoneNumberInputLogin")->setValidator(phoneNumberValidator);
 	ui->stackedWidget->findChild<QLineEdit*>("phone_number_on_signup")->setValidator(phoneNumberValidator);
+	ui->stackedWidget->findChild<QLineEdit*>("phone_number_on_recovery")->setValidator(phoneNumberValidator);
     ui->stackedWidget->setCurrentIndex(0);
 
 	
@@ -58,7 +69,10 @@ MainWindow::MainWindow(QWidget* parent)
 	disconnect(ui->stackedWidget->findChild<QPushButton*>("backbutton_1_onsignup"), nullptr, this, nullptr);
 	disconnect(ui->stackedWidget->findChild<QPushButton*>("backbutton_2_onsignup"), nullptr, this, nullptr);
 	disconnect(ui->stackedWidget->findChild<QPushButton*>("backbutton_3_onsignup"), nullptr, this, nullptr);
-	disconnect(ui->stackedWidget->findChild<QPushButton*>("login_on_recovery"), nullptr, this, nullptr);
+	disconnect(ui->stackedWidget->findChild<QPushButton*>("login_on_recovery_1"), nullptr, this, nullptr);
+	disconnect(ui->stackedWidget->findChild<QPushButton*>("confirmButton_on_recovery"), nullptr, this, nullptr);
+	//disconnect(ui->stackedWidget->findChild<QPushButton*>("confirmButton_on_recovery"), nullptr, this, nullptr);
+	disconnect(ui->stackedWidget->findChild<QPushButton*>("recoveryButton_on_recovery"), nullptr, this, nullptr);
 	
 	// Ensure unique connections
     connect(ui->stackedWidget->findChild<QPushButton*>("loginButton"), &QPushButton::clicked, this, &MainWindow::on_loginButton_clicked, Qt::UniqueConnection);
@@ -73,7 +87,11 @@ MainWindow::MainWindow(QWidget* parent)
 	connect(ui->stackedWidget->findChild<QPushButton*>("backbutton_1_onsignup"), &QPushButton::clicked, this, &MainWindow::on_backbutton_1_onsignup_clicked, Qt::UniqueConnection);
 	connect(ui->stackedWidget->findChild<QPushButton*>("backbutton_2_onsignup"), &QPushButton::clicked, this, &MainWindow::on_backbutton_2_onsignup_clicked, Qt::UniqueConnection);
 	connect(ui->stackedWidget->findChild<QPushButton*>("backbutton_3_onsignup"), &QPushButton::clicked, this, &MainWindow::on_backbutton_3_onsignup_clicked, Qt::UniqueConnection);
-	connect(ui->stackedWidget->findChild<QPushButton*>("login_on_recovery"), &QPushButton::clicked, this, &MainWindow::on_login_on_recovery_clicked, Qt::UniqueConnection);	
+	connect(ui->stackedWidget->findChild<QPushButton*>("login_on_recovery_1"), &QPushButton::clicked, this, &MainWindow::on_login_on_recovery_clicked, Qt::UniqueConnection);	
+	connect(ui->stackedWidget->findChild<QPushButton*>("login_on_recovery_2"), &QPushButton::clicked, this, &MainWindow::on_login_on_recovery_clicked, Qt::UniqueConnection);	
+	connect(ui->stackedWidget->findChild<QPushButton*>("confirmButton_on_recovery"), &QPushButton::clicked, this, &MainWindow::on_confirm_button_on_recovery_clicked, Qt::UniqueConnection);	
+	//connect(ui->stackedWidget->findChild<QPushButton*>("confirmButton_on_recovery"), &QPushButton::clicked, this, &MainWindow::on_confirm_button_on_recovery_clicked, Qt::UniqueConnection);	
+	connect(ui->stackedWidget->findChild<QPushButton*>("recoveryButton_on_recovery"), &QPushButton::clicked, this, &MainWindow::on_recovery_button_on_recovery_clicked, Qt::UniqueConnection);	
 	}
 
 MainWindow::~MainWindow()
@@ -98,10 +116,22 @@ QString MainWindow::getdatabasepath() {
 }
 
 bool MainWindow::validate_login(long int phoneNumber, QString password) {
+	QString databasePath = getdatabasepath();
+	QString path = QCoreApplication::applicationFilePath();
+	QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+	db.setDatabaseName(databasePath);
+	qDebug() << "Database path:" << db.databaseName();
+
+	if (!db.open()) {
+		qDebug() << "Error: Could not connect to database." << db.lastError();
+	}
+	else {
+		qDebug() << "connected to database.";
+	}
 	QSqlQuery query;
-	query.prepare("SELECT * FROM users WHERE PhoneNumber = :RealPhoneNumber AND Password = :RealPassword");
-	query.bindValue(":RealPhoneNumber", QString::number(phoneNumber));
-	query.bindValue(":RealPassword", password);
+	query.prepare("SELECT * FROM users WHERE PhoneNumber = :UserPhoneNumber AND Password = :UserPassword");
+	query.bindValue(":UserPhoneNumber", QString::number(phoneNumber));
+	query.bindValue(":UserPassword", password);
 	qDebug() << "phoneNumber: " << phoneNumber;
 	qDebug() << "password: " << password;
 	if (!query.exec()) {
@@ -117,7 +147,7 @@ bool MainWindow::validate_login(long int phoneNumber, QString password) {
 }
 void MainWindow::on_loginButton_clicked()
 {
-	
+
 	//INPUT VALIDATOR
 	qDebug() << "Login button clicked";
 	
@@ -136,7 +166,7 @@ void MainWindow::on_loginButton_clicked()
 	//sql querry
 
 	if (validate_login(phoneNumber, password)) {
-		ui->stackedWidget->setCurrentIndex(4);
+		ui->stackedWidget->setCurrentIndex(7);
 	}
 	else {
 		QMessageBox::warning(this, "Login Failed", "Invalid phone number or password.");
@@ -151,6 +181,7 @@ void MainWindow::on_logoutButton_clicked()
 	 QMessageBox::Yes | QMessageBox::No);
 	 if (reply == QMessageBox::Yes)
 	 {
+		clear_fields();
 		ui->stackedWidget->setCurrentIndex(0);
 	 }
 	 else{
@@ -161,6 +192,8 @@ void MainWindow::on_logoutButton_clicked()
 
 void MainWindow::on_createaccountButton_clicked()
 {
+
+	clear_fields();
 	qDebug() << "create account button clicked";
 	ui->stackedWidget->setCurrentIndex(1);
 }
@@ -191,6 +224,9 @@ void MainWindow::on_continue_1_clicked()
 		QMessageBox::warning(this, "Invalid Last Name", "Please enter a valid last name.");
 		return;
 	}
+	user.firstName = firstName;
+	user.middleName = middleName;
+	user.lastName = lastName;
 	ui->stackedWidget->setCurrentIndex(2);
 }
 
@@ -234,12 +270,30 @@ void MainWindow::on_continue_2_clicked()
 		gender = "other";
 	}
 	qDebug()<<"Gender : "<<gender;
+	
+	user.email = email;
+	user.address = address;
+	user.gender = gender;
 	ui->stackedWidget->setCurrentIndex(3);
 }
 
 
 void MainWindow::on_signupButton_clicked()
 {
+	//sql connections
+	QString databasePath = getdatabasepath();
+	QString path = QCoreApplication::applicationFilePath();
+	QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+	db.setDatabaseName(databasePath);
+	qDebug() << "Database path:" << db.databaseName();
+
+	if (!db.open()) {
+		qDebug() << "Error: Could not connect to database." << db.lastError();
+	}
+	else {
+		qDebug() << "connected to database.";
+	}
+
 	QString phoneNumberStr = ui->stackedWidget->findChild<QLineEdit*>("phone_number_on_signup")->text();
 	qDebug()<<"phone number: "<<phoneNumberStr;
 	
@@ -261,6 +315,9 @@ void MainWindow::on_signupButton_clicked()
 		return;
 	}
 
+	user.phoneNumber = phoneNumber;
+	user.password = password;
+	clear_fields();
 	ui->stackedWidget->setCurrentIndex(4);
 }
 void MainWindow::on_backbutton_1_onsignup_clicked()
@@ -294,13 +351,45 @@ void MainWindow::on_continue_3_clicked(){
 		return;
 	}
 
+	user.security1 = movie;
+	user.security2 = food;
+	user.amount = 0;
+	user.creditNumber = generateCreditCardNumber();
+	user.accountNumber = generateAccountNumber();
+	user.transactionHistory = "";
+
 	QMessageBox::StandardButton reply;
 	reply = QMessageBox::question(this, "confirmation", "Would you like to confirm the account setup?",
 	 QMessageBox::Yes | QMessageBox::No);
 	 if (reply == QMessageBox::Yes)
 	 {
+	
+	QSqlQuery query;
+	query.prepare("INSERT INTO users (PhoneNumber, Password, first_name, middle_name, last_name, email, gender, account_number, credit_card_number, security_question_1, security_question_2, current_amount, transaction_history, address) VALUES (:PhoneNumber, :Password, :FirstName, :MiddleName, :LastName, :Email, :Gender, :AccountNumber, :CreditNumber, :Security1, :Security2, :CurrentAmount, :TransactionHistory, :Address)");
+	
+	query.bindValue(":PhoneNumber", QString::number(user.phoneNumber));
+	query.bindValue(":Password", user.password);
+	query.bindValue(":FirstName", user.firstName);
+	query.bindValue(":MiddleName", user.middleName);
+	query.bindValue(":LastName", user.lastName);
+	query.bindValue(":Email", user.email);
+	query.bindValue(":Gender", user.gender);
+	query.bindValue(":AccountNumber", user.accountNumber);
+	query.bindValue(":CreditNumber", user.creditNumber);
+	query.bindValue(":Security1", user.security1);
+	query.bindValue(":Security2", user.security2);
+	query.bindValue(":CurrentAmount", QVariant::fromValue<qlonglong>(user.amount));
+	query.bindValue(":TransactionHistory",user.transactionHistory);
+	query.bindValue(":Address", user.address);
 
+		if (!query.exec()) {
+			QMessageBox::warning(this, "Error", "Account creation failed.");
+			qDebug() << "Error: Could not execute query." << query.lastError();
+			return;
+		}
+		
 		QMessageBox::information(this, "Account Created", "Account has been created successfully.");
+		clear_fields();
 		ui->stackedWidget->setCurrentIndex(0);
 	 }
 	 else{
@@ -310,11 +399,88 @@ void MainWindow::on_continue_3_clicked(){
 
 void MainWindow::on_forgotPassowordButton_clicked()
 {
+	clear_fields();
 	qDebug() << "forgot password button clicked";
 	ui->stackedWidget->setCurrentIndex(5);
 }
+
 void MainWindow::on_login_on_recovery_clicked()
 {
+	clear_fields();
 	qDebug() << "login button clicked";
 	ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_confirm_button_on_recovery_clicked()
+{
+	QString phoneNumberStr = ui->stackedWidget->findChild<QLineEdit*>("phone_number_on_recovery")->text();
+	qDebug()<<"phone number: "<<phoneNumberStr;
+	
+	long int phoneNumber = phoneNumberStr.toLong();
+	if (phoneNumberStr.length() != 10) {
+		QMessageBox::warning(this, "Invalid Phone Number", "Please enter a valid phone number.");
+		return;
+	}
+
+	QString movie = ui->stackedWidget->findChild<QLineEdit*>("movie_on_recovery")->text();
+	QString food = ui->stackedWidget->findChild<QLineEdit*>("food_on_recovery")->text();
+	
+	if (movie.length() == 0) {
+		QMessageBox::warning(this, "Invalid movie", "Please enter a valid movie.");
+		return;
+	}
+	
+	if (food.length() == 0) {
+		QMessageBox::warning(this, "Invalid Food", "Please enter a valid food.");
+		return;
+	}
+	ui->stackedWidget->setCurrentIndex(6);
+}
+
+
+void MainWindow::on_recovery_button_on_recovery_clicked()
+{
+	
+	QString password = ui->stackedWidget->findChild<QLineEdit*>("password_on_recovery")->text();
+	QString confirmpassword = ui->stackedWidget->findChild<QLineEdit*>("confirmpassword_on_recovery")->text();
+	
+	if (password.length() < 8 || confirmpassword.length() < 8) {
+		QMessageBox::warning(this, "Invalid password", "Please enter a valid password.");
+		return;
+	}
+	
+	if (password != confirmpassword) {
+		QMessageBox::warning(this, "Password Mismatch", "Passwords do not match.");
+		return;
+	}
+
+	QMessageBox :: information(this, "Password Changed", "Password has been changed successfully.");
+	ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+QString MainWindow::generateCreditCardNumber() {
+    QString creditCardNumber;
+    for (int i = 0; i < 16; ++i) {
+        int digit = QRandomGenerator::global()->bounded(10);
+        creditCardNumber.append(QString::number(digit));
+    }
+    return creditCardNumber;
+}
+
+QString MainWindow::generateAccountNumber() {
+    QString accountNumber;
+    for (int i = 0; i < 10; ++i) {
+        int digit = QRandomGenerator::global()->bounded(10);
+        accountNumber.append(QString::number(digit));
+    }
+    return accountNumber;
+}
+void MainWindow::clear_fields(){
+	foreach (QWidget *widget, ui->stackedWidget->findChildren<QWidget*>()) {
+			QLineEdit *lineEdit = qobject_cast<QLineEdit*>(widget);
+			if (lineEdit) {
+				lineEdit->clear(); 
+			}
+		}
 }
