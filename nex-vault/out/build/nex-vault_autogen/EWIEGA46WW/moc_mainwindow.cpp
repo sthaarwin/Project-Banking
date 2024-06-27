@@ -54,8 +54,16 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "on_recovery_button_on_recovery_clicked",
     "getdatabasepath",
     "validate_login",
+    "validate_recovery",
+    "number",
+    "movie",
+    "food",
+    "check_email",
+    "check_phone_number",
+    "phoneNumber",
     "generateCreditCardNumber",
     "generateAccountNumber",
+    "generateCreditCardExpiry",
     "clear_fields"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -69,7 +77,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      20,   14, // methods
+      24,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -77,26 +85,30 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  134,    2, 0x08,    1 /* Private */,
-       3,    0,  135,    2, 0x08,    2 /* Private */,
-       4,    0,  136,    2, 0x08,    3 /* Private */,
-       5,    0,  137,    2, 0x08,    4 /* Private */,
-       6,    0,  138,    2, 0x08,    5 /* Private */,
-       7,    0,  139,    2, 0x08,    6 /* Private */,
-       8,    0,  140,    2, 0x08,    7 /* Private */,
-       9,    0,  141,    2, 0x08,    8 /* Private */,
-      10,    0,  142,    2, 0x08,    9 /* Private */,
-      11,    0,  143,    2, 0x08,   10 /* Private */,
-      12,    0,  144,    2, 0x08,   11 /* Private */,
-      13,    0,  145,    2, 0x08,   12 /* Private */,
-      14,    0,  146,    2, 0x08,   13 /* Private */,
-      15,    0,  147,    2, 0x08,   14 /* Private */,
-      16,    0,  148,    2, 0x08,   15 /* Private */,
-      17,    0,  149,    2, 0x08,   16 /* Private */,
-      18,    2,  150,    2, 0x08,   17 /* Private */,
-      19,    0,  155,    2, 0x08,   20 /* Private */,
-      20,    0,  156,    2, 0x08,   21 /* Private */,
-      21,    0,  157,    2, 0x08,   22 /* Private */,
+       1,    0,  158,    2, 0x08,    1 /* Private */,
+       3,    0,  159,    2, 0x08,    2 /* Private */,
+       4,    0,  160,    2, 0x08,    3 /* Private */,
+       5,    0,  161,    2, 0x08,    4 /* Private */,
+       6,    0,  162,    2, 0x08,    5 /* Private */,
+       7,    0,  163,    2, 0x08,    6 /* Private */,
+       8,    0,  164,    2, 0x08,    7 /* Private */,
+       9,    0,  165,    2, 0x08,    8 /* Private */,
+      10,    0,  166,    2, 0x08,    9 /* Private */,
+      11,    0,  167,    2, 0x08,   10 /* Private */,
+      12,    0,  168,    2, 0x08,   11 /* Private */,
+      13,    0,  169,    2, 0x08,   12 /* Private */,
+      14,    0,  170,    2, 0x08,   13 /* Private */,
+      15,    0,  171,    2, 0x08,   14 /* Private */,
+      16,    0,  172,    2, 0x08,   15 /* Private */,
+      17,    0,  173,    2, 0x08,   16 /* Private */,
+      18,    2,  174,    2, 0x08,   17 /* Private */,
+      19,    3,  179,    2, 0x08,   20 /* Private */,
+      23,    1,  186,    2, 0x08,   24 /* Private */,
+      24,    1,  189,    2, 0x08,   26 /* Private */,
+      26,    0,  192,    2, 0x08,   28 /* Private */,
+      27,    0,  193,    2, 0x08,   29 /* Private */,
+      28,    0,  194,    2, 0x08,   30 /* Private */,
+      29,    0,  195,    2, 0x08,   31 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -116,6 +128,10 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void,
     QMetaType::QString,
     QMetaType::Bool, QMetaType::Long, QMetaType::QString,    2,    2,
+    QMetaType::Bool, QMetaType::Long, QMetaType::QString, QMetaType::QString,   20,   21,   22,
+    QMetaType::Bool, QMetaType::QString,    2,
+    QMetaType::Bool, QMetaType::Long,   25,
+    QMetaType::QString,
     QMetaType::QString,
     QMetaType::QString,
     QMetaType::Void,
@@ -168,9 +184,22 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         QtPrivate::TypeAndForceComplete<long int, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'validate_recovery'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<long int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'check_email'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'check_phone_number'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<long int, std::false_type>,
         // method 'generateCreditCardNumber'
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'generateAccountNumber'
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'generateCreditCardExpiry'
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'clear_fields'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
@@ -203,11 +232,19 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         case 16: { bool _r = _t->validate_login((*reinterpret_cast< std::add_pointer_t<long>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 17: { QString _r = _t->generateCreditCardNumber();
+        case 17: { bool _r = _t->validate_recovery((*reinterpret_cast< std::add_pointer_t<long>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 18: { bool _r = _t->check_email((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 19: { bool _r = _t->check_phone_number((*reinterpret_cast< std::add_pointer_t<long>>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 20: { QString _r = _t->generateCreditCardNumber();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 18: { QString _r = _t->generateAccountNumber();
+        case 21: { QString _r = _t->generateAccountNumber();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 19: _t->clear_fields(); break;
+        case 22: { QString _r = _t->generateCreditCardExpiry();
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
+        case 23: _t->clear_fields(); break;
         default: ;
         }
     }
@@ -232,13 +269,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 20)
+        if (_id < 24)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 20;
+        _id -= 24;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 20)
+        if (_id < 24)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 20;
+        _id -= 24;
     }
     return _id;
 }

@@ -35,8 +35,12 @@ private slots:
     void on_recovery_button_on_recovery_clicked();
     QString getdatabasepath();
 	bool validate_login(long int, QString);
+    bool validate_recovery(long int number, QString movie, QString food);
+    bool check_email(QString);
+    bool check_phone_number(long int phoneNumber);
     QString generateCreditCardNumber();
     QString generateAccountNumber();
+    QString generateCreditCardExpiry();
     void clear_fields();
 
 private:
