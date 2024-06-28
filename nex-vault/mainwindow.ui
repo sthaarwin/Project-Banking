@@ -766,8 +766,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:rgba(245, 245, 245,210);
-
-                                filter:blur(40px);</string>
+ filter:blur(40px);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>

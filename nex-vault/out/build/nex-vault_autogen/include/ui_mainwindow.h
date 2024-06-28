@@ -396,8 +396,7 @@ public:
         frame_11->setGeometry(QRect(490, 20, 401, 441));
         frame_11->setFont(font1);
         frame_11->setStyleSheet(QString::fromUtf8("background-color:rgba(245, 245, 245,210);\n"
-"\n"
-"                                filter:blur(40px);"));
+" filter:blur(40px);"));
         frame_11->setFrameShape(QFrame::StyledPanel);
         frame_11->setFrameShadow(QFrame::Raised);
         textEdit_4 = new QTextEdit(frame_11);

@@ -1,15 +1,9 @@
 # ninja log v5
-240	766	1719486373595106341	nex-vault	f305df876f15122
-216	238	1719486373076103287	CMakeFiles/nex-vault.dir/main.cpp.o	3a5c176fad62a0b
-214	239	1719486373077103293	CMakeFiles/nex-vault.dir/nex-vault_autogen/mocs_compilation.cpp.o	fb04dedcf8fd665
-18	214	1719486372982102734	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
-18	214	1719486372982102734	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/timestamp	8b73b39e438796e2
-18	214	1719486372982102734	nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
-217	240	1719486373077103293	CMakeFiles/nex-vault.dir/mainwindow.cpp.o	9ee8e22d70cb668d
-18	214	1719486372982102734	nex-vault_autogen/timestamp	8b73b39e438796e2
-4	72	1719487108594468615	nex-vault_autogen/timestamp	8b73b39e438796e2
-4	72	1719487108594468615	nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
-4	72	1719487108594468615	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/timestamp	8b73b39e438796e2
-4	72	1719487108594468615	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
-73	6389	1719487114903506544	CMakeFiles/nex-vault.dir/mainwindow.cpp.o	9ee8e22d70cb668d
-6389	6822	1719487115341509178	nex-vault	f305df876f15122
+6286	6733	1719489092320962879	nex-vault	f305df876f15122
+122	145	1719487782020553377	CMakeFiles/nex-vault.dir/main.cpp.o	3a5c176fad62a0b
+121	142	1719487782018553365	CMakeFiles/nex-vault.dir/nex-vault_autogen/mocs_compilation.cpp.o	fb04dedcf8fd665
+13	111	1719489085703922532	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
+13	111	1719489085703922532	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/timestamp	8b73b39e438796e2
+13	111	1719489085703922532	nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
+112	6286	1719489091872960148	CMakeFiles/nex-vault.dir/mainwindow.cpp.o	9ee8e22d70cb668d
+13	111	1719489085703922532	nex-vault_autogen/timestamp	8b73b39e438796e2
