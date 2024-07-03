@@ -18,6 +18,7 @@ public:
     ~MainWindow();
 
 private slots:
+    void StartDBConnection();
 	void on_loginButton_clicked();
     void on_logoutButton_clicked();
     void on_forgotPassowordButton_clicked();
@@ -42,6 +43,12 @@ private slots:
     QString generateAccountNumber();
     QString generateCreditCardExpiry();
     void clear_fields();
+    bool createTransactionTable(const QString& );
+    void StartUISetup(QString );
+    void on_transer_funds_button_clicked();
+    void on_back_on_transaction_clicked();
+    void on_continue_on_transaction_clicked();
+    void on_back_on_verify_clicked();
 
 private:
     Ui::MainWindow *ui;

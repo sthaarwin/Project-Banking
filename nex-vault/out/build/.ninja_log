@@ -1,9 +1,17 @@
 # ninja log v5
-6286	6733	1719489092320962879	nex-vault	f305df876f15122
-122	145	1719487782020553377	CMakeFiles/nex-vault.dir/main.cpp.o	3a5c176fad62a0b
-121	142	1719487782018553365	CMakeFiles/nex-vault.dir/nex-vault_autogen/mocs_compilation.cpp.o	fb04dedcf8fd665
-13	111	1719489085703922532	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
-13	111	1719489085703922532	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/timestamp	8b73b39e438796e2
-13	111	1719489085703922532	nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
-112	6286	1719489091872960148	CMakeFiles/nex-vault.dir/mainwindow.cpp.o	9ee8e22d70cb668d
-13	111	1719489085703922532	nex-vault_autogen/timestamp	8b73b39e438796e2
+5	59	1719986420819541634	nex-vault_autogen/timestamp	8b73b39e438796e2
+60	6036	1719986426788587826	CMakeFiles/nex-vault.dir/mainwindow.cpp.o	9ee8e22d70cb668d
+5	59	1719986420819541634	nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
+5	59	1719986420819541634	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/timestamp	8b73b39e438796e2
+5	59	1719986420819541634	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
+615	3965	1719986124626110853	CMakeFiles/nex-vault.dir/nex-vault_autogen/mocs_compilation.cpp.o	fb04dedcf8fd665
+615	3843	1719986124503109777	CMakeFiles/nex-vault.dir/main.cpp.o	3a5c176fad62a0b
+6036	6470	1719986427226591216	nex-vault	f305df876f15122
+7	631	1720002704522226141	nex-vault_autogen/timestamp	8b73b39e438796e2
+7	631	1720002704522226141	nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
+7	631	1720002704522226141	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/timestamp	8b73b39e438796e2
+7	631	1720002704522226141	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
+632	3918	1720002707814247745	CMakeFiles/nex-vault.dir/main.cpp.o	3a5c176fad62a0b
+632	4135	1720002708034249230	CMakeFiles/nex-vault.dir/nex-vault_autogen/mocs_compilation.cpp.o	fb04dedcf8fd665
+632	7093	1720002710990269182	CMakeFiles/nex-vault.dir/mainwindow.cpp.o	9ee8e22d70cb668d
+7093	7550	1720002711455272320	nex-vault	f305df876f15122

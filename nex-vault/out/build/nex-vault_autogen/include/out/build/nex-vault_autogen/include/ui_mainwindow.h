@@ -14,11 +14,9 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
-#include <QtWidgets/QScrollBar>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
@@ -94,31 +92,28 @@ public:
     QWidget *Main_page;
     QFrame *frame_8;
     QTextEdit *textEdit;
-    QListView *listView;
     QTextEdit *textEdit_5;
     QFrame *frame_12;
     QTextEdit *textEdit_8;
-    QTextEdit *textEdit_9;
-    QFrame *frame_13;
-    QFrame *frame_14;
-    QFrame *frame_15;
-    QFrame *frame_16;
     QPushButton *logoutOnMain;
-    QScrollBar *verticalScrollBar;
+    QPushButton *TransferFunds;
+    QTextEdit *textEdit_9;
+    QLabel *AccountNumber;
+    QLabel *CurrentBalance;
+    QLabel *FirstName;
     QWidget *Transfer_page;
     QFrame *frame_5;
-    QLineEdit *holder_name;
-    QPushButton *continue_5;
-    QTextEdit *back;
+    QPushButton *continue_on_transaction;
     QTextEdit *Sendmoney_txt;
-    QLineEdit *phone_no_2;
+    QLineEdit *account_number_on_transaction;
     QLineEdit *amount;
+    QPushButton *back_on_transaction;
     QWidget *Verify;
     QFrame *frame_6;
     QLineEdit *holder_name_2;
     QPushButton *continue_6;
-    QTextEdit *back_3;
     QTextEdit *Sendmoney_txt_2;
+    QPushButton *back_on_verify;
     QWidget *transaction_success;
     QFrame *frame_7;
     QPushButton *continue_7;
@@ -661,135 +656,115 @@ public:
         frame_8 = new QFrame(Main_page);
         frame_8->setObjectName("frame_8");
         frame_8->setGeometry(QRect(0, 0, 911, 481));
-        frame_8->setStyleSheet(QString::fromUtf8("background-color:rgb(133, 18, 247);\n"
-"                                border-radius:15px;"));
+        frame_8->setStyleSheet(QString::fromUtf8(" background-color: #4B0082;\n"
+"    border-radius: 15px;"));
         frame_8->setFrameShape(QFrame::StyledPanel);
         frame_8->setFrameShadow(QFrame::Raised);
         textEdit = new QTextEdit(frame_8);
         textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(490, 230, 111, 31));
+        textEdit->setGeometry(QRect(40, 270, 111, 31));
         textEdit->setReadOnly(true);
-        listView = new QListView(frame_8);
-        listView->setObjectName("listView");
-        listView->setGeometry(QRect(490, 260, 411, 211));
-        listView->setStyleSheet(QString::fromUtf8("background-color:rgb(80, 80, 80);"));
         textEdit_5 = new QTextEdit(frame_8);
         textEdit_5->setObjectName("textEdit_5");
-        textEdit_5->setGeometry(QRect(30, 10, 91, 51));
+        textEdit_5->setGeometry(QRect(30, 30, 171, 41));
+        QFont font4;
+        font4.setPointSize(16);
+        textEdit_5->setFont(font4);
         frame_12 = new QFrame(frame_8);
         frame_12->setObjectName("frame_12");
-        frame_12->setGeometry(QRect(30, 220, 341, 201));
+        frame_12->setGeometry(QRect(540, 30, 341, 201));
         frame_12->setStyleSheet(QString::fromUtf8("background-color:rgb(255, 255, 255);"));
         frame_12->setFrameShape(QFrame::StyledPanel);
         frame_12->setFrameShadow(QFrame::Raised);
         textEdit_8 = new QTextEdit(frame_8);
         textEdit_8->setObjectName("textEdit_8");
-        textEdit_8->setGeometry(QRect(70, 70, 131, 31));
-        textEdit_9 = new QTextEdit(frame_8);
-        textEdit_9->setObjectName("textEdit_9");
-        textEdit_9->setGeometry(QRect(80, 130, 61, 31));
-        frame_13 = new QFrame(frame_8);
-        frame_13->setObjectName("frame_13");
-        frame_13->setGeometry(QRect(500, 130, 81, 61));
-        frame_13->setStyleSheet(QString::fromUtf8("background-color:rgb(255, 255, 255);"));
-        frame_13->setFrameShape(QFrame::StyledPanel);
-        frame_13->setFrameShadow(QFrame::Raised);
-        frame_14 = new QFrame(frame_8);
-        frame_14->setObjectName("frame_14");
-        frame_14->setGeometry(QRect(610, 130, 81, 61));
-        frame_14->setStyleSheet(QString::fromUtf8("background-color:rgb(255, 255, 255);"));
-        frame_14->setFrameShape(QFrame::StyledPanel);
-        frame_14->setFrameShadow(QFrame::Raised);
-        frame_15 = new QFrame(frame_8);
-        frame_15->setObjectName("frame_15");
-        frame_15->setGeometry(QRect(720, 130, 81, 61));
-        frame_15->setStyleSheet(QString::fromUtf8("background-color:rgb(255, 255, 255);"));
-        frame_15->setFrameShape(QFrame::StyledPanel);
-        frame_15->setFrameShadow(QFrame::Raised);
-        frame_16 = new QFrame(frame_8);
-        frame_16->setObjectName("frame_16");
-        frame_16->setGeometry(QRect(820, 130, 81, 61));
-        frame_16->setStyleSheet(QString::fromUtf8("background-color:rgb(255, 255, 255);"));
-        frame_16->setFrameShape(QFrame::StyledPanel);
-        frame_16->setFrameShadow(QFrame::Raised);
+        textEdit_8->setGeometry(QRect(60, 80, 421, 41));
+        textEdit_8->setFont(font);
         logoutOnMain = new QPushButton(frame_8);
         logoutOnMain->setObjectName("logoutOnMain");
-        logoutOnMain->setGeometry(QRect(830, 20, 71, 31));
-        QFont font4;
-        font4.setPointSize(10);
-        font4.setWeight(QFont::DemiBold);
-        logoutOnMain->setFont(font4);
+        logoutOnMain->setGeometry(QRect(210, 210, 71, 31));
+        QFont font5;
+        font5.setPointSize(10);
+        font5.setWeight(QFont::DemiBold);
+        logoutOnMain->setFont(font5);
         logoutOnMain->setMouseTracking(true);
         logoutOnMain->setTabletTracking(true);
         logoutOnMain->setStyleSheet(QString::fromUtf8("color:rgb(255, 255, 255);\n"
 "                                    background-color: rgb(69, 0, 104);\n"
 "\n"
 "                                    border-radius:7px;"));
-        verticalScrollBar = new QScrollBar(frame_8);
-        verticalScrollBar->setObjectName("verticalScrollBar");
-        verticalScrollBar->setGeometry(QRect(876, 279, 16, 171));
-        verticalScrollBar->setStyleSheet(QString::fromUtf8("background-color: rgb(158, 158, 158);"));
-        verticalScrollBar->setOrientation(Qt::Vertical);
+        TransferFunds = new QPushButton(frame_8);
+        TransferFunds->setObjectName("TransferFunds");
+        TransferFunds->setGeometry(QRect(40, 210, 141, 31));
+        TransferFunds->setFont(font5);
+        TransferFunds->setMouseTracking(true);
+        TransferFunds->setTabletTracking(true);
+        TransferFunds->setStyleSheet(QString::fromUtf8("color:rgb(255, 255, 255);\n"
+"                                    background-color: rgb(69, 0, 104);\n"
+"\n"
+"                                    border-radius:7px;"));
+        textEdit_9 = new QTextEdit(frame_8);
+        textEdit_9->setObjectName("textEdit_9");
+        textEdit_9->setGeometry(QRect(60, 140, 421, 41));
+        textEdit_9->setFont(font);
+        AccountNumber = new QLabel(frame_8);
+        AccountNumber->setObjectName("AccountNumber");
+        AccountNumber->setGeometry(QRect(250, 80, 271, 31));
+        QFont font6;
+        font6.setPointSize(16);
+        font6.setBold(true);
+        AccountNumber->setFont(font6);
+        CurrentBalance = new QLabel(frame_8);
+        CurrentBalance->setObjectName("CurrentBalance");
+        CurrentBalance->setGeometry(QRect(250, 140, 271, 31));
+        CurrentBalance->setFont(font6);
+        FirstName = new QLabel(frame_8);
+        FirstName->setObjectName("FirstName");
+        FirstName->setGeometry(QRect(140, 30, 271, 31));
+        FirstName->setFont(font6);
         stackedWidget->addWidget(Main_page);
         Transfer_page = new QWidget();
         Transfer_page->setObjectName("Transfer_page");
         frame_5 = new QFrame(Transfer_page);
         frame_5->setObjectName("frame_5");
-        frame_5->setGeometry(QRect(-20, 0, 931, 501));
+        frame_5->setGeometry(QRect(0, 0, 911, 481));
         frame_5->setFont(font1);
         frame_5->setStyleSheet(QString::fromUtf8("background-color:rgba(245, 245, 245,210);\n"
-"\n"
-"                                filter:blur(40px);"));
+"filter:blur(40px);"));
         frame_5->setFrameShape(QFrame::StyledPanel);
         frame_5->setFrameShadow(QFrame::Raised);
-        holder_name = new QLineEdit(frame_5);
-        holder_name->setObjectName("holder_name");
-        holder_name->setGeometry(QRect(310, 130, 301, 51));
-        holder_name->setFont(font3);
-        holder_name->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
-"\n"
-"                                    border:2px solid rgba(105,118,132,225);\n"
-"                                    color:rgba(63, 63, 63,230);\n"
-"                                    padding-bottom:1px;\n"
-"                                    border-radius:10px;"));
-        holder_name->setEchoMode(QLineEdit::Normal);
-        holder_name->setClearButtonEnabled(true);
-        continue_5 = new QPushButton(frame_5);
-        continue_5->setObjectName("continue_5");
-        continue_5->setGeometry(QRect(360, 370, 201, 41));
-        continue_5->setFont(font2);
-        continue_5->setMouseTracking(true);
-        continue_5->setTabletTracking(true);
-        continue_5->setStyleSheet(QString::fromUtf8("\n"
+        continue_on_transaction = new QPushButton(frame_5);
+        continue_on_transaction->setObjectName("continue_on_transaction");
+        continue_on_transaction->setGeometry(QRect(360, 360, 201, 41));
+        continue_on_transaction->setFont(font2);
+        continue_on_transaction->setMouseTracking(true);
+        continue_on_transaction->setTabletTracking(true);
+        continue_on_transaction->setStyleSheet(QString::fromUtf8("\n"
 "                                    color:rgb(255, 255, 255);\n"
 "                                    background-color:rgb(31, 78, 121);\n"
 "\n"
 "                                    border-radius:7px;"));
-        back = new QTextEdit(frame_5);
-        back->setObjectName("back");
-        back->setGeometry(QRect(400, 430, 131, 41));
-        back->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);"));
         Sendmoney_txt = new QTextEdit(frame_5);
         Sendmoney_txt->setObjectName("Sendmoney_txt");
-        Sendmoney_txt->setGeometry(QRect(290, 40, 341, 61));
+        Sendmoney_txt->setGeometry(QRect(290, 50, 341, 61));
         Sendmoney_txt->setStyleSheet(QString::fromUtf8("background-color:rgba(255, 235, 59,0);\n"
 "                                    text-color:rgba(245, 245, 245,210);"));
         Sendmoney_txt->setReadOnly(true);
-        phone_no_2 = new QLineEdit(frame_5);
-        phone_no_2->setObjectName("phone_no_2");
-        phone_no_2->setGeometry(QRect(310, 210, 301, 51));
-        phone_no_2->setFont(font3);
-        phone_no_2->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
+        account_number_on_transaction = new QLineEdit(frame_5);
+        account_number_on_transaction->setObjectName("account_number_on_transaction");
+        account_number_on_transaction->setGeometry(QRect(310, 170, 301, 51));
+        account_number_on_transaction->setFont(font3);
+        account_number_on_transaction->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
 "\n"
 "                                    border:2px solid rgba(105,118,132,225);\n"
 "                                    color:rgba(63, 63, 63,230);\n"
 "                                    padding-bottom:1px;\n"
 "                                    border-radius:10px;"));
-        phone_no_2->setEchoMode(QLineEdit::Normal);
-        phone_no_2->setClearButtonEnabled(true);
+        account_number_on_transaction->setEchoMode(QLineEdit::Normal);
+        account_number_on_transaction->setClearButtonEnabled(true);
         amount = new QLineEdit(frame_5);
         amount->setObjectName("amount");
-        amount->setGeometry(QRect(310, 290, 301, 51));
+        amount->setGeometry(QRect(310, 260, 301, 51));
         amount->setFont(font3);
         amount->setStyleSheet(QString::fromUtf8("background-color:rgba(0, 0, 0,0);\n"
 "\n"
@@ -799,6 +774,13 @@ public:
 "                                    border-radius:10px;"));
         amount->setEchoMode(QLineEdit::Normal);
         amount->setClearButtonEnabled(true);
+        back_on_transaction = new QPushButton(frame_5);
+        back_on_transaction->setObjectName("back_on_transaction");
+        back_on_transaction->setGeometry(QRect(420, 420, 80, 26));
+        back_on_transaction->setStyleSheet(QString::fromUtf8("color : rgb(31, 78, 121);\n"
+" font-weight: bold;\n"
+" background-color: transparent;\n"
+" border: none;"));
         stackedWidget->addWidget(Transfer_page);
         Verify = new QWidget();
         Verify->setObjectName("Verify");
@@ -834,16 +816,19 @@ public:
 "                                    background-color:rgb(31, 78, 121);\n"
 "\n"
 "                                    border-radius:7px;"));
-        back_3 = new QTextEdit(frame_6);
-        back_3->setObjectName("back_3");
-        back_3->setGeometry(QRect(390, 410, 131, 41));
-        back_3->setStyleSheet(QString::fromUtf8("background-color:rgba(0,0,0,0);"));
         Sendmoney_txt_2 = new QTextEdit(frame_6);
         Sendmoney_txt_2->setObjectName("Sendmoney_txt_2");
         Sendmoney_txt_2->setGeometry(QRect(280, 90, 341, 61));
         Sendmoney_txt_2->setStyleSheet(QString::fromUtf8("background-color:rgba(255, 235, 59,0);\n"
 "                                    text-color:rgba(245, 245, 245,210);"));
         Sendmoney_txt_2->setReadOnly(true);
+        back_on_verify = new QPushButton(frame_6);
+        back_on_verify->setObjectName("back_on_verify");
+        back_on_verify->setGeometry(QRect(420, 410, 80, 26));
+        back_on_verify->setStyleSheet(QString::fromUtf8("color : rgb(31, 78, 121);\n"
+" font-weight: bold;\n"
+" background-color: transparent;\n"
+" border: none;"));
         stackedWidget->addWidget(Verify);
         transaction_success = new QWidget();
         transaction_success->setObjectName("transaction_success");
@@ -908,7 +893,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(9);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1048,36 +1033,30 @@ public:
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:700; color:#dadada;\">Welcome</span></p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'Noto Sans'; font-size:16pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-weight:700; color:#dadada;\">Welcome, </span></p></body></html>", nullptr));
         textEdit_8->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> <span style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:700;\">Account Number</span></p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'Noto Sans'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:16pt; font-weight:700;\">Account Number</span></p></body></html>", nullptr));
+        logoutOnMain->setText(QCoreApplication::translate("MainWindow", "Logout", nullptr));
+        TransferFunds->setText(QCoreApplication::translate("MainWindow", "Transfer Funds", nullptr));
         textEdit_9->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:700;\">Balance</span></p></body></html>", nullptr));
-        logoutOnMain->setText(QCoreApplication::translate("MainWindow", "Logout", nullptr));
-        holder_name->setPlaceholderText(QCoreApplication::translate("MainWindow", "Account Holder's Name", nullptr));
-        continue_5->setText(QCoreApplication::translate("MainWindow", "Continue", nullptr));
-        back->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:700; color:#1f4e79;\">Back</span></p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'Noto Sans'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:16pt; font-weight:700;\">Current Balance</span></p></body></html>", nullptr));
+        AccountNumber->setText(QCoreApplication::translate("MainWindow", "1234567890", nullptr));
+        CurrentBalance->setText(QCoreApplication::translate("MainWindow", "1234567890", nullptr));
+        FirstName->setText(QCoreApplication::translate("MainWindow", "Hero", nullptr));
+        continue_on_transaction->setText(QCoreApplication::translate("MainWindow", "Continue", nullptr));
         Sendmoney_txt->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -1087,18 +1066,11 @@ public:
 "</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">                                    </p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:20pt; font-weight:700; color:#4b474d;\">Send Money</span></p></body></html>", nullptr));
-        phone_no_2->setPlaceholderText(QCoreApplication::translate("MainWindow", "Account Number", nullptr));
+        account_number_on_transaction->setPlaceholderText(QCoreApplication::translate("MainWindow", "Account Number", nullptr));
         amount->setPlaceholderText(QCoreApplication::translate("MainWindow", "Amount", nullptr));
+        back_on_transaction->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         holder_name_2->setPlaceholderText(QCoreApplication::translate("MainWindow", "Password", nullptr));
         continue_6->setText(QCoreApplication::translate("MainWindow", "Confirm", nullptr));
-        back_3->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:11pt; font-weight:700; color:#1f4e79;\">Back</span></p></body></html>", nullptr));
         Sendmoney_txt_2->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -1108,6 +1080,7 @@ public:
 "</style></head><body style=\" font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">                                    </p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:20pt; font-weight:700; color:#4b474d;\">Verify</span></p></body></html>", nullptr));
+        back_on_verify->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         continue_7->setText(QCoreApplication::translate("MainWindow", "Done", nullptr));
         back_4->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
