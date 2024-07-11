@@ -49,6 +49,7 @@ private slots:
     void on_back_on_transaction_clicked();
     void on_continue_on_transaction_clicked();
     void on_back_on_verify_clicked();
+    void on_confirm_trasaction();
 
 private:
     Ui::MainWindow *ui;
