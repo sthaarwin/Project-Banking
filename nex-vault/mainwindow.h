@@ -36,9 +36,10 @@ private slots:
     void on_recovery_button_on_recovery_clicked();
     QString getdatabasepath();
 	bool validate_login(long int, QString);
-    bool validate_recovery(long int number, QString movie, QString food);
+    bool validate_recovery(long int , QString , QString );
     bool check_email(QString);
-    bool check_phone_number(long int phoneNumber);
+    bool check_password(QString , long int );
+    bool check_phone_number(long int );
     QString generateCreditCardNumber();
     QString generateAccountNumber();
     QString generateCreditCardExpiry();
@@ -49,7 +50,7 @@ private slots:
     void on_back_on_transaction_clicked();
     void on_continue_on_transaction_clicked();
     void on_back_on_verify_clicked();
-    void on_confirm_trasaction();
+    void on_confirm_transaction();
 
 private:
     Ui::MainWindow *ui;

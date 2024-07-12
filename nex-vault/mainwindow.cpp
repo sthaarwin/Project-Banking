@@ -77,6 +77,7 @@ MainWindow::MainWindow(QWidget* parent)
 	disconnect(ui->stackedWidget->findChild<QPushButton*>("back_on_transaction"), nullptr, this, nullptr);
 	disconnect(ui->stackedWidget->findChild<QPushButton*>("continue_on_transaction"), nullptr, this, nullptr);
 	disconnect(ui->stackedWidget->findChild<QPushButton*>("back_on_verify"), nullptr, this, nullptr);
+	disconnect(ui->stackedWidget->findChild<QPushButton*>("confirmTransaction"), nullptr, this, nullptr);
 	
 	// Ensure unique connections
     connect(ui->stackedWidget->findChild<QPushButton*>("loginButton"), &QPushButton::clicked, this, &MainWindow::on_loginButton_clicked, Qt::UniqueConnection);
@@ -99,7 +100,9 @@ MainWindow::MainWindow(QWidget* parent)
 	connect(ui->stackedWidget->findChild<QPushButton*>("back_on_transaction"), &QPushButton::clicked, this, &MainWindow::on_back_on_transaction_clicked, Qt::UniqueConnection);	
 	connect(ui->stackedWidget->findChild<QPushButton*>("continue_on_transaction"), &QPushButton::clicked, this, &MainWindow::on_continue_on_transaction_clicked, Qt::UniqueConnection);	
 	connect(ui->stackedWidget->findChild<QPushButton*>("back_on_verify"), &QPushButton::clicked, this, &MainWindow::on_back_on_verify_clicked, Qt::UniqueConnection);		
+	connect(ui->stackedWidget->findChild<QPushButton*>("confirmTransaction"), &QPushButton::clicked, this, &MainWindow::on_confirm_transaction, Qt::UniqueConnection);
 	}
+
 
 MainWindow::~MainWindow()
 {
@@ -208,6 +211,7 @@ void MainWindow::StartUISetup(QString Number){
      Sender.accountNumber = query.value("account_number").toString();
      QString amount = query.value("current_amount").toString();
 	 Sender.amount = amount.toInt();
+	 Sender.phoneNumber = query.value("PhoneNumber").toLongLong();
 
     ui->stackedWidget->findChild<QLabel*>("FirstName")->setText(Sender.firstName);
     ui->stackedWidget->findChild<QLabel*>("AccountNumber")->setText(Sender.accountNumber);
@@ -577,6 +581,29 @@ bool MainWindow::check_phone_number(long int phoneNumber){
 	return false;
 }
 
+
+bool MainWindow::check_password(QString password, long int phoneNumber){
+	
+	qDebug() << "password: " << password;
+	qDebug() << "phoneNumber: " << phoneNumber;
+	StartDBConnection();
+	QSqlQuery query;
+	query.prepare("SELECT * FROM users WHERE Password = :UserPassword AND PhoneNumber = :UserPhoneNumber");
+	query.bindValue(":UserPassword", password);
+	query.bindValue(":UserPhoneNumber", QString::number(phoneNumber));
+
+	if (!query.exec()) {
+		qDebug() << "Error: Could not execute query." << query.lastError();
+		return false;
+	}
+	if (query.next()) {
+		qDebug() << "password exists.";
+		return true;
+	}
+	qDebug() << "password doesnot exists.";
+	return false;
+}
+
 bool MainWindow::check_email(QString email){
 	StartDBConnection();
 
@@ -647,8 +674,10 @@ void MainWindow::on_back_on_transaction_clicked(){
 }
 
 void MainWindow::on_continue_on_transaction_clicked(){
+
 	QString receiver = ui->stackedWidget->findChild<QLineEdit*>("account_number_on_transaction")->text();
 	Receiver.accountNumber = receiver;
+
 	QString  to_be_transfered_balance = ui->stackedWidget->findChild<QLineEdit*>("transaction_amount")->text();
 	int amount = to_be_transfered_balance.toInt();
 	
@@ -667,7 +696,7 @@ void MainWindow::on_continue_on_transaction_clicked(){
 	QSqlQuery query;
 	query.prepare("SELECT * FROM users WHERE account_number = :AccountNumber");
 	query.bindValue(":AccountNumber", Receiver.accountNumber);
-	query.bindValue(":phoneNumber", QString::number(Receiver.phoneNumber));
+	
 
 	if (!query.exec()) {
 		qDebug() << "Error: Could not execute query." << query.lastError();
@@ -678,6 +707,8 @@ void MainWindow::on_continue_on_transaction_clicked(){
 		QMessageBox::warning(this, "Account Number Not Found", "Account number does not exist.");
 		return;
 	}
+	Receiver.phoneNumber =   query.value("PhoneNumber").toLongLong();
+	Receiver.amount = query.value("current_amount").toLongLong();
 
 	if(Sender.accountNumber == receiver){
 		QMessageBox::warning(this, "Invalid Account Number", "Cannot transfer funds to the same account.");
@@ -690,66 +721,90 @@ void MainWindow::on_continue_on_transaction_clicked(){
 	}
 	TransferAmount = amount;
 	ui->stackedWidget->setCurrentIndex(9);
-	
-
 
 }
+
+
 void MainWindow::on_back_on_verify_clicked(){
 	ui->stackedWidget->setCurrentIndex(8);
 }
 
-void MainWindow::on_confirm_trasaction(){
-	
-	QMessageBox::StandardButton reply;
-	reply = QMessageBox::question(this, "confirmation", "Would you like to confirm the transaction?",
-	 QMessageBox::Yes | QMessageBox::No);
-	 if (reply == QMessageBox::Yes)
-	 {
-		ui->stackedWidget->setCurrentIndex(9);
-		QString SendertableName = "t_" + QString::number(Sender.phoneNumber);
-		QString SenderqueryStr = QString("INSERT INTO %1 (user_id, amount, transaction_type) VALUES (:UserId, :Amount, :TransactionType)").arg(SendertableName);
-		query.prepare(SenderqueryStr);
 
-		query.bindValue(":UserId", QVariant::fromValue(Sender.phoneNumber));
-		query.bindValue(":Amount", QVariant::fromValue<qlonglong>(-amount));
-		query.bindValue(":TransactionType", "Debit");
-		if (!query.exec()) {
-			qDebug() << "Error: Could not execute query." << query.lastError();
-			return;
-		}
+void MainWindow::on_confirm_transaction() {
+    StartDBConnection();
+    QString password = ui->stackedWidget->findChild<QLineEdit*>("password_on_transaction")->text();
 
-		QString ReceivertableName = "t_" + QString::number(Receiver.phoneNumber);
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Confirmation", "Would you like to confirm the transaction?",
+                                  QMessageBox::Yes | QMessageBox::No);
+    if (reply == QMessageBox::Yes) {
+        if (!check_password(password, Sender.phoneNumber)) {
+            QMessageBox::warning(this, "Invalid Password", "Invalid password.");
+            return;
+        }
+
+
+        QSqlDatabase db = QSqlDatabase::database();
+        db.transaction();
+
+        QSqlQuery query;
+        QString SendertableName = "t_" + QString::number(Sender.phoneNumber);
+        QString SenderqueryStr = QString("INSERT INTO %1 (user_id, amount, transaction_type) VALUES (:UserId, :Amount, :TransactionType)").arg(SendertableName);
+        query.prepare(SenderqueryStr);
+        query.bindValue(":UserId", QVariant::fromValue(Sender.phoneNumber));
+        query.bindValue(":Amount", QVariant::fromValue(-TransferAmount));
+        query.bindValue(":TransactionType", "Debit");
+
+        if (!query.exec()) {
+            qDebug() << "Error: Could not execute sender query." << query.lastError();
+            db.rollback();
+            return;
+        }
+		qDebug()<<"Receiver : "<<Receiver.phoneNumber;
+        QString ReceivertableName = "t_" + QString::number(Receiver.phoneNumber);
 		QString ReceiverqueryStr = QString("INSERT INTO %1 (user_id, amount, transaction_type) VALUES (:UserId, :Amount, :TransactionType)").arg(ReceivertableName);
 		query.prepare(ReceiverqueryStr);
-
 		query.bindValue(":UserId", QVariant::fromValue(Receiver.phoneNumber));
-		query.bindValue(":Amount", QVariant::fromValue<qlonglong>(amount));
+		query.bindValue(":Amount", QVariant::fromValue(TransferAmount));
 		query.bindValue(":TransactionType", "Credit");
+
 		if (!query.exec()) {
-			qDebug() << "Error: Could not execute query." << query.lastError();
+			qDebug() << "Error: Could not execute receiver query." << query.lastError();
+			db.rollback();
 			return;
 		}
 
-		query.prepare("UPDATE users SET current_amount = :Amount WHERE account_number = :AccountNumber");
-		query.bindValue(":Amount", QVariant::fromValue<qlonglong>(Sender.amount));
-		query.bindValue(":AccountNumber", Sender.accountNumber);
-		if (!query.exec()) {
-			qDebug() << "Error: Could not execute query." << query.lastError();
-			return;
-		}
+        query.prepare("UPDATE users SET current_amount = :Amount WHERE account_number = :AccountNumber");
+        query.bindValue(":Amount", QVariant::fromValue(Sender.amount - TransferAmount));
+        query.bindValue(":AccountNumber", Sender.accountNumber);
 
-		query.prepare("UPDATE users SET current_amount = :Amount WHERE account_number = :AccountNumber");
-		query.bindValue(":Amount", QVariant::fromValue<qlonglong>(Receiver.amount));
-		query.bindValue(":AccountNumber", Receiver.accountNumber);
-		if (!query.exec()) {
-			qDebug() << "Error: Could not execute query." << query.lastError();
-			return;
-		}
-		QMessageBox::information(this, "Transaction Successful", "Transaction has been completed successfully.");
-		clear_fields();
+        if (!query.exec()) {
+            qDebug() << "Error: Could not update sender amount." << query.lastError();
+            db.rollback();
+            return;
+        }
 
-	 }
-	 else{
-		return;
-	 }
+
+
+        query.prepare("UPDATE users SET current_amount = :Amount WHERE account_number = :AccountNumber");
+        query.bindValue(":Amount", QVariant::fromValue(Receiver.amount + TransferAmount));
+        query.bindValue(":AccountNumber", Receiver.accountNumber);
+
+        if (!query.exec()) {
+            qDebug() << "Error: Could not update receiver amount." << query.lastError();
+            db.rollback();
+            return;
+        }
+
+        if (!db.commit()) {
+            qDebug() << "Error: Could not commit the transaction." << db.lastError();
+            QMessageBox::warning(this, "Transaction Error", "Transaction could not be completed.");
+            return;
+        }
+
+        QMessageBox::information(this, "Transaction Successful", "Transaction has been completed successfully.");
+        clear_fields();
+		StartUISetup(QString::number(Sender.phoneNumber));
+		ui->stackedWidget->setCurrentIndex(7);
+    }
 }

@@ -33,7 +33,7 @@
                         border-radius:17px;</string>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>9</number>
     </property>
     <widget class="QWidget" name="Login_page">
      <widget class="QFrame" name="frame">
@@ -57,10 +57,10 @@
                                 filter:blur(40px);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QTextEdit" name="Login_text">
        <property name="geometry">
@@ -113,7 +113,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 </string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Phone Number</string>
@@ -147,7 +147,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Password</enum>
+        <enum>QLineEdit::Password</enum>
        </property>
        <property name="placeholderText">
         <string>Password</string>
@@ -235,10 +235,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </rect>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QLabel" name="image">
        <property name="geometry">
@@ -279,10 +279,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 filter:blur(40px);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QTextEdit" name="textEdit_2">
        <property name="geometry">
@@ -336,7 +336,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 </string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>First Name</string>
@@ -368,7 +368,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 </string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Middle Name (optional)</string>
@@ -400,7 +400,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 </string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Last Name</string>
@@ -473,10 +473,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string notr="true">background-color:rgb(44, 44, 44);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
     </widget>
@@ -501,10 +501,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 filter:blur(40px);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QTextEdit" name="textEdit_3">
        <property name="geometry">
@@ -653,7 +653,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Address</string>
@@ -688,7 +688,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Email Address</string>
@@ -769,10 +769,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
  filter:blur(40px);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QTextEdit" name="textEdit_4">
        <property name="geometry">
@@ -828,7 +828,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Password</enum>
+        <enum>QLineEdit::Password</enum>
        </property>
        <property name="placeholderText">
         <string>Password</string>
@@ -863,7 +863,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Phone Number</string>
@@ -929,7 +929,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Password</enum>
+        <enum>QLineEdit::Password</enum>
        </property>
        <property name="placeholderText">
         <string>Confirm Password</string>
@@ -980,10 +980,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 filter:blur(40px);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QTextEdit" name="textEdit_10">
        <property name="geometry">
@@ -1036,7 +1036,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 </string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Enter your favourite movie </string>
@@ -1068,7 +1068,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 </string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Enter  you favourite food</string>
@@ -1141,10 +1141,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string notr="true">background-color:rgb(44, 44, 44);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
      </widget>
     </widget>
@@ -1169,10 +1169,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 filter:blur(40px);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QTextEdit" name="textEdit_23">
        <property name="geometry">
@@ -1228,7 +1228,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Enter your favourite movie</string>
@@ -1263,7 +1263,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Phone Number</string>
@@ -1328,7 +1328,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Enter your favourite food</string>
@@ -1379,10 +1379,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 filter:blur(40px);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QTextEdit" name="textEdit_22">
        <property name="geometry">
@@ -1438,7 +1438,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Password</enum>
+        <enum>QLineEdit::Password</enum>
        </property>
        <property name="placeholderText">
         <string>New Password</string>
@@ -1503,7 +1503,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string/>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Password</enum>
+        <enum>QLineEdit::Password</enum>
        </property>
        <property name="placeholderText">
         <string>Confirm Password</string>
@@ -1548,10 +1548,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
     border-radius: 15px;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QTextEdit" name="textEdit">
        <property name="geometry">
@@ -1614,10 +1614,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <string notr="true">background-color:rgb(255, 255, 255);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::Shape::StyledPanel</enum>
+        <enum>QFrame::StyledPanel</enum>
        </property>
        <property name="frameShadow">
-        <enum>QFrame::Shadow::Raised</enum>
+        <enum>QFrame::Raised</enum>
        </property>
       </widget>
       <widget class="QTextEdit" name="textEdit_8">
@@ -1811,10 +1811,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
 filter:blur(40px);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QPushButton" name="continue_on_transaction">
        <property name="geometry">
@@ -1899,7 +1899,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                     border-radius:10px;</string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Account Number</string>
@@ -1932,7 +1932,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                     border-radius:10px;</string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Normal</enum>
+        <enum>QLineEdit::Normal</enum>
        </property>
        <property name="placeholderText">
         <string>Amount</string>
@@ -1983,12 +1983,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 filter:blur(40px);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLineEdit" name="holder_name_2">
+      <widget class="QLineEdit" name="password_on_transaction">
        <property name="geometry">
         <rect>
          <x>310</x>
@@ -2012,7 +2012,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                     border-radius:10px;</string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::EchoMode::Password</enum>
+        <enum>QLineEdit::Password</enum>
        </property>
        <property name="placeholderText">
         <string>Password</string>
@@ -2021,7 +2021,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QPushButton" name="continue_6">
+      <widget class="QPushButton" name="confirmTransaction">
        <property name="geometry">
         <rect>
          <x>360</x>
@@ -2123,10 +2123,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
 border-radius:15px;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QPushButton" name="continue_7">
        <property name="geometry">
@@ -2255,10 +2255,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                                 filter:blur(40px);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Shape::StyledPanel</enum>
+       <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Shadow::Raised</enum>
+       <enum>QFrame::Raised</enum>
       </property>
       <widget class="QTextEdit" name="textEdit_6">
        <property name="geometry">
