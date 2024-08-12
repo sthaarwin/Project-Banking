@@ -1,15 +1,12 @@
 # ninja log v5
-3	47	1720808986724187665	nex-vault_autogen/timestamp	8b73b39e438796e2
-48	4329	1720808991002220988	CMakeFiles/nex-vault.dir/mainwindow.cpp.o	9ee8e22d70cb668d
-3	47	1720808986724187665	nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
-3	47	1720808986724187665	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/timestamp	8b73b39e438796e2
-3	47	1720808986724187665	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
-339	2410	1720757548093374494	CMakeFiles/nex-vault.dir/nex-vault_autogen/mocs_compilation.cpp.o	fb04dedcf8fd665
-339	2338	1720757548020374146	CMakeFiles/nex-vault.dir/main.cpp.o	3a5c176fad62a0b
-4329	4661	1720808991335223582	nex-vault	f305df876f15122
-3	40	1720809121385201142	nex-vault_autogen/timestamp	8b73b39e438796e2
-3	40	1720809121385201142	nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
-3	40	1720809121385201142	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/timestamp	8b73b39e438796e2
-3	40	1720809121385201142	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
-41	48	1720809121393201201	CMakeFiles/nex-vault.dir/mainwindow.cpp.o	9ee8e22d70cb668d
-48	403	1720809121745203799	nex-vault	f305df876f15122
+56	178	1722571220159997347	CMakeFiles/nex-vault.dir/nex-vault_autogen/EWIEGA46WW/qrc_images.cpp.o	6c68911475ebc5ed
+11312	12047	1723457588148257211	nex-vault	6b7a1f4333ece800
+767	4572	1723454902871132273	CMakeFiles/nex-vault.dir/main.cpp.o	b4e2ad470d467ef4
+767	4520	1723454902818131928	CMakeFiles/nex-vault.dir/nex-vault_autogen/mocs_compilation.cpp.o	b0bedc353d9d25e1
+40	56	1722571220036996612	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/EWIEGA46WW/qrc_images.cpp	ef510961d3ea783d
+12	174	1723457576283181881	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
+12	174	1723457576283181881	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/timestamp	8b73b39e438796e2
+12	174	1723457576283181881	nex-vault_autogen/mocs_compilation.cpp	8b73b39e438796e2
+40	56	1722571220036996612	nex-vault_autogen/EWIEGA46WW/qrc_images.cpp	ef510961d3ea783d
+178	11312	1723457587413252545	CMakeFiles/nex-vault.dir/mainwindow.cpp.o	5d3ed62d2a526efe
+12	174	1723457576283181881	nex-vault_autogen/timestamp	8b73b39e438796e2

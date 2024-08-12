@@ -389,7 +389,8 @@
 		"/home/axzyte/Qt/6.7.1/gcc_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake",
 		"/home/axzyte/Qt/6.7.1/gcc_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake",
 		"/home/axzyte/Qt/6.7.1/gcc_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake",
-		"/usr/share/cmake/Modules/GNUInstallDirs.cmake"
+		"/usr/share/cmake/Modules/GNUInstallDirs.cmake",
+		"/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/images.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault",
 	"DEP_FILE" : "/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/out/build/nex-vault_autogen/deps",

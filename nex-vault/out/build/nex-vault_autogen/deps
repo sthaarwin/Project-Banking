@@ -394,6 +394,7 @@ nex-vault_autogen/timestamp: \
 	/home/axzyte/Qt/6.7.1/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
 	/home/axzyte/Qt/6.7.1/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
 	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/CMakeLists.txt \
+	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/images.qrc \
 	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/main.cpp \
 	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/mainwindow.cpp \
 	/home/axzyte/codes/c++/projects/QT/Project-Banking/nex-vault/mainwindow.h \
